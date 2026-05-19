@@ -1,0 +1,3664 @@
+{
+  "client": {
+    "code": "CCF",
+    "name": "Cranswick Continental Foods",
+    "logoUrl": "https://promank13.azurewebsites.net/Proman/media/PDF/cranswick-continental-transparent.png"
+  },
+  "provider": {
+    "name": "PROMAN UK",
+    "logoUrl": "https://proman-uk.com/img/logo.png"
+  },
+  "reportingYear": 2026,
+  "lastUpdated": "2026-05-19T09:00:00Z",
+  "schemaVersion": "1.0-flat",
+  "weeksMeta": [
+    {
+      "w": 1,
+      "mon": "2025-12-29",
+      "sun": "2026-01-04",
+      "mon_short": "29 Dec",
+      "sun_short": "04 Jan",
+      "month": 1
+    },
+    {
+      "w": 2,
+      "mon": "2026-01-05",
+      "sun": "2026-01-11",
+      "mon_short": "05 Jan",
+      "sun_short": "11 Jan",
+      "month": 1
+    },
+    {
+      "w": 3,
+      "mon": "2026-01-12",
+      "sun": "2026-01-18",
+      "mon_short": "12 Jan",
+      "sun_short": "18 Jan",
+      "month": 1
+    },
+    {
+      "w": 4,
+      "mon": "2026-01-19",
+      "sun": "2026-01-25",
+      "mon_short": "19 Jan",
+      "sun_short": "25 Jan",
+      "month": 1
+    },
+    {
+      "w": 5,
+      "mon": "2026-01-26",
+      "sun": "2026-02-01",
+      "mon_short": "26 Jan",
+      "sun_short": "01 Feb",
+      "month": 2
+    },
+    {
+      "w": 6,
+      "mon": "2026-02-02",
+      "sun": "2026-02-08",
+      "mon_short": "02 Feb",
+      "sun_short": "08 Feb",
+      "month": 2
+    },
+    {
+      "w": 7,
+      "mon": "2026-02-09",
+      "sun": "2026-02-15",
+      "mon_short": "09 Feb",
+      "sun_short": "15 Feb",
+      "month": 2
+    },
+    {
+      "w": 8,
+      "mon": "2026-02-16",
+      "sun": "2026-02-22",
+      "mon_short": "16 Feb",
+      "sun_short": "22 Feb",
+      "month": 2
+    },
+    {
+      "w": 9,
+      "mon": "2026-02-23",
+      "sun": "2026-03-01",
+      "mon_short": "23 Feb",
+      "sun_short": "01 Mar",
+      "month": 3
+    },
+    {
+      "w": 10,
+      "mon": "2026-03-02",
+      "sun": "2026-03-08",
+      "mon_short": "02 Mar",
+      "sun_short": "08 Mar",
+      "month": 3
+    },
+    {
+      "w": 11,
+      "mon": "2026-03-09",
+      "sun": "2026-03-15",
+      "mon_short": "09 Mar",
+      "sun_short": "15 Mar",
+      "month": 3
+    },
+    {
+      "w": 12,
+      "mon": "2026-03-16",
+      "sun": "2026-03-22",
+      "mon_short": "16 Mar",
+      "sun_short": "22 Mar",
+      "month": 3
+    },
+    {
+      "w": 13,
+      "mon": "2026-03-23",
+      "sun": "2026-03-29",
+      "mon_short": "23 Mar",
+      "sun_short": "29 Mar",
+      "month": 3
+    },
+    {
+      "w": 14,
+      "mon": "2026-03-30",
+      "sun": "2026-04-05",
+      "mon_short": "30 Mar",
+      "sun_short": "05 Apr",
+      "month": 4
+    },
+    {
+      "w": 15,
+      "mon": "2026-04-06",
+      "sun": "2026-04-12",
+      "mon_short": "06 Apr",
+      "sun_short": "12 Apr",
+      "month": 4
+    },
+    {
+      "w": 16,
+      "mon": "2026-04-13",
+      "sun": "2026-04-19",
+      "mon_short": "13 Apr",
+      "sun_short": "19 Apr",
+      "month": 4
+    },
+    {
+      "w": 17,
+      "mon": "2026-04-20",
+      "sun": "2026-04-26",
+      "mon_short": "20 Apr",
+      "sun_short": "26 Apr",
+      "month": 4
+    },
+    {
+      "w": 18,
+      "mon": "2026-04-27",
+      "sun": "2026-05-03",
+      "mon_short": "27 Apr",
+      "sun_short": "03 May",
+      "month": 5
+    },
+    {
+      "w": 19,
+      "mon": "2026-05-04",
+      "sun": "2026-05-10",
+      "mon_short": "04 May",
+      "sun_short": "10 May",
+      "month": 5
+    },
+    {
+      "w": 20,
+      "mon": "2026-05-11",
+      "sun": "2026-05-17",
+      "mon_short": "11 May",
+      "sun_short": "17 May",
+      "month": 5
+    },
+    {
+      "w": 21,
+      "mon": "2026-05-18",
+      "sun": "2026-05-24",
+      "mon_short": "18 May",
+      "sun_short": "24 May",
+      "month": 5
+    },
+    {
+      "w": 22,
+      "mon": "2026-05-25",
+      "sun": "2026-05-31",
+      "mon_short": "25 May",
+      "sun_short": "31 May",
+      "month": 5
+    },
+    {
+      "w": 23,
+      "mon": "2026-06-01",
+      "sun": "2026-06-07",
+      "mon_short": "01 Jun",
+      "sun_short": "07 Jun",
+      "month": 6
+    },
+    {
+      "w": 24,
+      "mon": "2026-06-08",
+      "sun": "2026-06-14",
+      "mon_short": "08 Jun",
+      "sun_short": "14 Jun",
+      "month": 6
+    },
+    {
+      "w": 25,
+      "mon": "2026-06-15",
+      "sun": "2026-06-21",
+      "mon_short": "15 Jun",
+      "sun_short": "21 Jun",
+      "month": 6
+    },
+    {
+      "w": 26,
+      "mon": "2026-06-22",
+      "sun": "2026-06-28",
+      "mon_short": "22 Jun",
+      "sun_short": "28 Jun",
+      "month": 6
+    },
+    {
+      "w": 27,
+      "mon": "2026-06-29",
+      "sun": "2026-07-05",
+      "mon_short": "29 Jun",
+      "sun_short": "05 Jul",
+      "month": 7
+    },
+    {
+      "w": 28,
+      "mon": "2026-07-06",
+      "sun": "2026-07-12",
+      "mon_short": "06 Jul",
+      "sun_short": "12 Jul",
+      "month": 7
+    },
+    {
+      "w": 29,
+      "mon": "2026-07-13",
+      "sun": "2026-07-19",
+      "mon_short": "13 Jul",
+      "sun_short": "19 Jul",
+      "month": 7
+    },
+    {
+      "w": 30,
+      "mon": "2026-07-20",
+      "sun": "2026-07-26",
+      "mon_short": "20 Jul",
+      "sun_short": "26 Jul",
+      "month": 7
+    },
+    {
+      "w": 31,
+      "mon": "2026-07-27",
+      "sun": "2026-08-02",
+      "mon_short": "27 Jul",
+      "sun_short": "02 Aug",
+      "month": 8
+    },
+    {
+      "w": 32,
+      "mon": "2026-08-03",
+      "sun": "2026-08-09",
+      "mon_short": "03 Aug",
+      "sun_short": "09 Aug",
+      "month": 8
+    },
+    {
+      "w": 33,
+      "mon": "2026-08-10",
+      "sun": "2026-08-16",
+      "mon_short": "10 Aug",
+      "sun_short": "16 Aug",
+      "month": 8
+    },
+    {
+      "w": 34,
+      "mon": "2026-08-17",
+      "sun": "2026-08-23",
+      "mon_short": "17 Aug",
+      "sun_short": "23 Aug",
+      "month": 8
+    },
+    {
+      "w": 35,
+      "mon": "2026-08-24",
+      "sun": "2026-08-30",
+      "mon_short": "24 Aug",
+      "sun_short": "30 Aug",
+      "month": 8
+    },
+    {
+      "w": 36,
+      "mon": "2026-08-31",
+      "sun": "2026-09-06",
+      "mon_short": "31 Aug",
+      "sun_short": "06 Sep",
+      "month": 9
+    },
+    {
+      "w": 37,
+      "mon": "2026-09-07",
+      "sun": "2026-09-13",
+      "mon_short": "07 Sep",
+      "sun_short": "13 Sep",
+      "month": 9
+    },
+    {
+      "w": 38,
+      "mon": "2026-09-14",
+      "sun": "2026-09-20",
+      "mon_short": "14 Sep",
+      "sun_short": "20 Sep",
+      "month": 9
+    },
+    {
+      "w": 39,
+      "mon": "2026-09-21",
+      "sun": "2026-09-27",
+      "mon_short": "21 Sep",
+      "sun_short": "27 Sep",
+      "month": 9
+    },
+    {
+      "w": 40,
+      "mon": "2026-09-28",
+      "sun": "2026-10-04",
+      "mon_short": "28 Sep",
+      "sun_short": "04 Oct",
+      "month": 10
+    },
+    {
+      "w": 41,
+      "mon": "2026-10-05",
+      "sun": "2026-10-11",
+      "mon_short": "05 Oct",
+      "sun_short": "11 Oct",
+      "month": 10
+    },
+    {
+      "w": 42,
+      "mon": "2026-10-12",
+      "sun": "2026-10-18",
+      "mon_short": "12 Oct",
+      "sun_short": "18 Oct",
+      "month": 10
+    },
+    {
+      "w": 43,
+      "mon": "2026-10-19",
+      "sun": "2026-10-25",
+      "mon_short": "19 Oct",
+      "sun_short": "25 Oct",
+      "month": 10
+    },
+    {
+      "w": 44,
+      "mon": "2026-10-26",
+      "sun": "2026-11-01",
+      "mon_short": "26 Oct",
+      "sun_short": "01 Nov",
+      "month": 11
+    },
+    {
+      "w": 45,
+      "mon": "2026-11-02",
+      "sun": "2026-11-08",
+      "mon_short": "02 Nov",
+      "sun_short": "08 Nov",
+      "month": 11
+    },
+    {
+      "w": 46,
+      "mon": "2026-11-09",
+      "sun": "2026-11-15",
+      "mon_short": "09 Nov",
+      "sun_short": "15 Nov",
+      "month": 11
+    },
+    {
+      "w": 47,
+      "mon": "2026-11-16",
+      "sun": "2026-11-22",
+      "mon_short": "16 Nov",
+      "sun_short": "22 Nov",
+      "month": 11
+    },
+    {
+      "w": 48,
+      "mon": "2026-11-23",
+      "sun": "2026-11-29",
+      "mon_short": "23 Nov",
+      "sun_short": "29 Nov",
+      "month": 11
+    },
+    {
+      "w": 49,
+      "mon": "2026-11-30",
+      "sun": "2026-12-06",
+      "mon_short": "30 Nov",
+      "sun_short": "06 Dec",
+      "month": 12
+    },
+    {
+      "w": 50,
+      "mon": "2026-12-07",
+      "sun": "2026-12-13",
+      "mon_short": "07 Dec",
+      "sun_short": "13 Dec",
+      "month": 12
+    },
+    {
+      "w": 51,
+      "mon": "2026-12-14",
+      "sun": "2026-12-20",
+      "mon_short": "14 Dec",
+      "sun_short": "20 Dec",
+      "month": 12
+    },
+    {
+      "w": 52,
+      "mon": "2026-12-21",
+      "sun": "2026-12-27",
+      "mon_short": "21 Dec",
+      "sun_short": "27 Dec",
+      "month": 12
+    },
+    {
+      "w": 53,
+      "mon": "2026-12-28",
+      "sun": "2027-01-03",
+      "mon_short": "28 Dec",
+      "sun_short": "03 Jan",
+      "month": 1
+    }
+  ],
+  "weeks": [
+    {
+      "week": 1,
+      "kpi_index": 0,
+      "value_num": 82,
+      "value_text": ""
+    },
+    {
+      "week": 1,
+      "kpi_index": 1,
+      "value_num": 6437.0,
+      "value_text": ""
+    },
+    {
+      "week": 1,
+      "kpi_index": 3,
+      "value_num": 50,
+      "value_text": ""
+    },
+    {
+      "week": 1,
+      "kpi_index": 4,
+      "value_num": 32,
+      "value_text": ""
+    },
+    {
+      "week": 1,
+      "kpi_index": 5,
+      "value_num": 82,
+      "value_text": ""
+    },
+    {
+      "week": 1,
+      "kpi_index": 6,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 1,
+      "kpi_index": 7,
+      "value_num": 27,
+      "value_text": ""
+    },
+    {
+      "week": 1,
+      "kpi_index": 8,
+      "value_num": 31,
+      "value_text": ""
+    },
+    {
+      "week": 1,
+      "kpi_index": 9,
+      "value_num": 15,
+      "value_text": ""
+    },
+    {
+      "week": 1,
+      "kpi_index": 10,
+      "value_num": 5,
+      "value_text": ""
+    },
+    {
+      "week": 1,
+      "kpi_index": 11,
+      "value_num": 4,
+      "value_text": ""
+    },
+    {
+      "week": 1,
+      "kpi_index": 12,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 1,
+      "kpi_index": 13,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 1,
+      "kpi_index": 14,
+      "value_num": 4,
+      "value_text": ""
+    },
+    {
+      "week": 1,
+      "kpi_index": 15,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 1,
+      "kpi_index": 16,
+      "value_num": 34,
+      "value_text": ""
+    },
+    {
+      "week": 1,
+      "kpi_index": 17,
+      "value_num": 7,
+      "value_text": ""
+    },
+    {
+      "week": 1,
+      "kpi_index": 18,
+      "value_num": 24,
+      "value_text": ""
+    },
+    {
+      "week": 1,
+      "kpi_index": 19,
+      "value_num": 10,
+      "value_text": ""
+    },
+    {
+      "week": 1,
+      "kpi_index": 20,
+      "value_num": "",
+      "value_text": "Afghanistan x2, Angola x1, Dominican Republic x1, El Salvador x1, Ghanaian x1, Guinea-Bissau x1, Kenya x1, Mali x1, Somalia x1, Sudan x2, Sri Lanka x1, Saudi Arabia x1"
+    },
+    {
+      "week": 1,
+      "kpi_index": 21,
+      "value_num": "",
+      "value_text": "N/A"
+    },
+    {
+      "week": 1,
+      "kpi_index": 22,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 1,
+      "kpi_index": 23,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 1,
+      "kpi_index": 24,
+      "value_num": 3,
+      "value_text": ""
+    },
+    {
+      "week": 1,
+      "kpi_index": 25,
+      "value_num": 1410,
+      "value_text": ""
+    },
+    {
+      "week": 1,
+      "kpi_index": 26,
+      "value_num": 1395,
+      "value_text": ""
+    },
+    {
+      "week": 1,
+      "kpi_index": 27,
+      "value_num": 1380,
+      "value_text": ""
+    },
+    {
+      "week": 1,
+      "kpi_index": 28,
+      "value_num": 80,
+      "value_text": ""
+    },
+    {
+      "week": 2,
+      "kpi_index": 0,
+      "value_num": 85,
+      "value_text": ""
+    },
+    {
+      "week": 2,
+      "kpi_index": 1,
+      "value_num": 6817.0,
+      "value_text": ""
+    },
+    {
+      "week": 2,
+      "kpi_index": 3,
+      "value_num": 51,
+      "value_text": ""
+    },
+    {
+      "week": 2,
+      "kpi_index": 4,
+      "value_num": 34,
+      "value_text": ""
+    },
+    {
+      "week": 2,
+      "kpi_index": 5,
+      "value_num": 85,
+      "value_text": ""
+    },
+    {
+      "week": 2,
+      "kpi_index": 6,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 2,
+      "kpi_index": 7,
+      "value_num": 28,
+      "value_text": ""
+    },
+    {
+      "week": 2,
+      "kpi_index": 8,
+      "value_num": 32,
+      "value_text": ""
+    },
+    {
+      "week": 2,
+      "kpi_index": 9,
+      "value_num": 16,
+      "value_text": ""
+    },
+    {
+      "week": 2,
+      "kpi_index": 10,
+      "value_num": 5,
+      "value_text": ""
+    },
+    {
+      "week": 2,
+      "kpi_index": 11,
+      "value_num": 4,
+      "value_text": ""
+    },
+    {
+      "week": 2,
+      "kpi_index": 12,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 2,
+      "kpi_index": 13,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 2,
+      "kpi_index": 14,
+      "value_num": 4,
+      "value_text": ""
+    },
+    {
+      "week": 2,
+      "kpi_index": 15,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 2,
+      "kpi_index": 16,
+      "value_num": 35,
+      "value_text": ""
+    },
+    {
+      "week": 2,
+      "kpi_index": 17,
+      "value_num": 8,
+      "value_text": ""
+    },
+    {
+      "week": 2,
+      "kpi_index": 18,
+      "value_num": 25,
+      "value_text": ""
+    },
+    {
+      "week": 2,
+      "kpi_index": 19,
+      "value_num": 10,
+      "value_text": ""
+    },
+    {
+      "week": 2,
+      "kpi_index": 20,
+      "value_num": "",
+      "value_text": "Afghanistan x2, Angola x1, Dominican Republic x1, El Salvador x1, Ghanaian x1, Guinea-Bissau x1, Kenya x1, Mali x1, Somalia x1, Sudan x2, Sri Lanka x1, Saudi Arabia x1"
+    },
+    {
+      "week": 2,
+      "kpi_index": 21,
+      "value_num": "",
+      "value_text": "N/A"
+    },
+    {
+      "week": 2,
+      "kpi_index": 22,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 2,
+      "kpi_index": 23,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 2,
+      "kpi_index": 24,
+      "value_num": 4,
+      "value_text": ""
+    },
+    {
+      "week": 2,
+      "kpi_index": 25,
+      "value_num": 1450,
+      "value_text": ""
+    },
+    {
+      "week": 2,
+      "kpi_index": 26,
+      "value_num": 1445,
+      "value_text": ""
+    },
+    {
+      "week": 2,
+      "kpi_index": 27,
+      "value_num": 1440,
+      "value_text": ""
+    },
+    {
+      "week": 2,
+      "kpi_index": 28,
+      "value_num": 83,
+      "value_text": ""
+    },
+    {
+      "week": 3,
+      "kpi_index": 0,
+      "value_num": 88,
+      "value_text": ""
+    },
+    {
+      "week": 3,
+      "kpi_index": 1,
+      "value_num": 7022.4,
+      "value_text": ""
+    },
+    {
+      "week": 3,
+      "kpi_index": 3,
+      "value_num": 53,
+      "value_text": ""
+    },
+    {
+      "week": 3,
+      "kpi_index": 4,
+      "value_num": 35,
+      "value_text": ""
+    },
+    {
+      "week": 3,
+      "kpi_index": 5,
+      "value_num": 88,
+      "value_text": ""
+    },
+    {
+      "week": 3,
+      "kpi_index": 6,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 3,
+      "kpi_index": 7,
+      "value_num": 29,
+      "value_text": ""
+    },
+    {
+      "week": 3,
+      "kpi_index": 8,
+      "value_num": 33,
+      "value_text": ""
+    },
+    {
+      "week": 3,
+      "kpi_index": 9,
+      "value_num": 17,
+      "value_text": ""
+    },
+    {
+      "week": 3,
+      "kpi_index": 10,
+      "value_num": 5,
+      "value_text": ""
+    },
+    {
+      "week": 3,
+      "kpi_index": 11,
+      "value_num": 4,
+      "value_text": ""
+    },
+    {
+      "week": 3,
+      "kpi_index": 12,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 3,
+      "kpi_index": 13,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 3,
+      "kpi_index": 14,
+      "value_num": 4,
+      "value_text": ""
+    },
+    {
+      "week": 3,
+      "kpi_index": 15,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 3,
+      "kpi_index": 16,
+      "value_num": 37,
+      "value_text": ""
+    },
+    {
+      "week": 3,
+      "kpi_index": 17,
+      "value_num": 8,
+      "value_text": ""
+    },
+    {
+      "week": 3,
+      "kpi_index": 18,
+      "value_num": 26,
+      "value_text": ""
+    },
+    {
+      "week": 3,
+      "kpi_index": 19,
+      "value_num": 10,
+      "value_text": ""
+    },
+    {
+      "week": 3,
+      "kpi_index": 20,
+      "value_num": "",
+      "value_text": "Afghanistan x2, Angola x1, Dominican Republic x1, El Salvador x1, Ghanaian x1, Guinea-Bissau x1, Kenya x1, Mali x1, Somalia x1, Sudan x2, Sri Lanka x1, Saudi Arabia x1"
+    },
+    {
+      "week": 3,
+      "kpi_index": 21,
+      "value_num": "",
+      "value_text": "N/A"
+    },
+    {
+      "week": 3,
+      "kpi_index": 22,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 3,
+      "kpi_index": 23,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 3,
+      "kpi_index": 24,
+      "value_num": 2,
+      "value_text": ""
+    },
+    {
+      "week": 3,
+      "kpi_index": 25,
+      "value_num": 1500,
+      "value_text": ""
+    },
+    {
+      "week": 3,
+      "kpi_index": 26,
+      "value_num": 1490,
+      "value_text": ""
+    },
+    {
+      "week": 3,
+      "kpi_index": 27,
+      "value_num": 1475,
+      "value_text": ""
+    },
+    {
+      "week": 3,
+      "kpi_index": 28,
+      "value_num": 85,
+      "value_text": ""
+    },
+    {
+      "week": 3,
+      "kpi_index": 29,
+      "value_num": "",
+      "value_text": "Minor slip in chilled area, no injury. Reviewed with site H&S team."
+    },
+    {
+      "week": 4,
+      "kpi_index": 0,
+      "value_num": 90,
+      "value_text": ""
+    },
+    {
+      "week": 4,
+      "kpi_index": 1,
+      "value_num": 7245.0,
+      "value_text": ""
+    },
+    {
+      "week": 4,
+      "kpi_index": 3,
+      "value_num": 54,
+      "value_text": ""
+    },
+    {
+      "week": 4,
+      "kpi_index": 4,
+      "value_num": 36,
+      "value_text": ""
+    },
+    {
+      "week": 4,
+      "kpi_index": 5,
+      "value_num": 90,
+      "value_text": ""
+    },
+    {
+      "week": 4,
+      "kpi_index": 6,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 4,
+      "kpi_index": 7,
+      "value_num": 29,
+      "value_text": ""
+    },
+    {
+      "week": 4,
+      "kpi_index": 8,
+      "value_num": 34,
+      "value_text": ""
+    },
+    {
+      "week": 4,
+      "kpi_index": 9,
+      "value_num": 17,
+      "value_text": ""
+    },
+    {
+      "week": 4,
+      "kpi_index": 10,
+      "value_num": 5,
+      "value_text": ""
+    },
+    {
+      "week": 4,
+      "kpi_index": 11,
+      "value_num": 5,
+      "value_text": ""
+    },
+    {
+      "week": 4,
+      "kpi_index": 12,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 4,
+      "kpi_index": 13,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 4,
+      "kpi_index": 14,
+      "value_num": 4,
+      "value_text": ""
+    },
+    {
+      "week": 4,
+      "kpi_index": 15,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 4,
+      "kpi_index": 16,
+      "value_num": 37,
+      "value_text": ""
+    },
+    {
+      "week": 4,
+      "kpi_index": 17,
+      "value_num": 8,
+      "value_text": ""
+    },
+    {
+      "week": 4,
+      "kpi_index": 18,
+      "value_num": 27,
+      "value_text": ""
+    },
+    {
+      "week": 4,
+      "kpi_index": 19,
+      "value_num": 11,
+      "value_text": ""
+    },
+    {
+      "week": 4,
+      "kpi_index": 20,
+      "value_num": "",
+      "value_text": "Afghanistan x2, Angola x1, Dominican Republic x1, El Salvador x1, Ghanaian x1, Guinea-Bissau x1, Kenya x1, Mali x1, Somalia x1, Sudan x2, Sri Lanka x1, Saudi Arabia x1"
+    },
+    {
+      "week": 4,
+      "kpi_index": 21,
+      "value_num": "",
+      "value_text": "N/A"
+    },
+    {
+      "week": 4,
+      "kpi_index": 22,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 4,
+      "kpi_index": 23,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 4,
+      "kpi_index": 24,
+      "value_num": 5,
+      "value_text": ""
+    },
+    {
+      "week": 4,
+      "kpi_index": 25,
+      "value_num": 1530,
+      "value_text": ""
+    },
+    {
+      "week": 4,
+      "kpi_index": 26,
+      "value_num": 1520,
+      "value_text": ""
+    },
+    {
+      "week": 4,
+      "kpi_index": 27,
+      "value_num": 1510,
+      "value_text": ""
+    },
+    {
+      "week": 4,
+      "kpi_index": 28,
+      "value_num": 87,
+      "value_text": ""
+    },
+    {
+      "week": 5,
+      "kpi_index": 0,
+      "value_num": 92,
+      "value_text": ""
+    },
+    {
+      "week": 5,
+      "kpi_index": 1,
+      "value_num": 7452.0,
+      "value_text": ""
+    },
+    {
+      "week": 5,
+      "kpi_index": 3,
+      "value_num": 56,
+      "value_text": ""
+    },
+    {
+      "week": 5,
+      "kpi_index": 4,
+      "value_num": 36,
+      "value_text": ""
+    },
+    {
+      "week": 5,
+      "kpi_index": 5,
+      "value_num": 92,
+      "value_text": ""
+    },
+    {
+      "week": 5,
+      "kpi_index": 6,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 5,
+      "kpi_index": 7,
+      "value_num": 30,
+      "value_text": ""
+    },
+    {
+      "week": 5,
+      "kpi_index": 8,
+      "value_num": 35,
+      "value_text": ""
+    },
+    {
+      "week": 5,
+      "kpi_index": 9,
+      "value_num": 17,
+      "value_text": ""
+    },
+    {
+      "week": 5,
+      "kpi_index": 10,
+      "value_num": 5,
+      "value_text": ""
+    },
+    {
+      "week": 5,
+      "kpi_index": 11,
+      "value_num": 5,
+      "value_text": ""
+    },
+    {
+      "week": 5,
+      "kpi_index": 12,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 5,
+      "kpi_index": 13,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 5,
+      "kpi_index": 14,
+      "value_num": 5,
+      "value_text": ""
+    },
+    {
+      "week": 5,
+      "kpi_index": 15,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 5,
+      "kpi_index": 16,
+      "value_num": 38,
+      "value_text": ""
+    },
+    {
+      "week": 5,
+      "kpi_index": 17,
+      "value_num": 8,
+      "value_text": ""
+    },
+    {
+      "week": 5,
+      "kpi_index": 18,
+      "value_num": 27,
+      "value_text": ""
+    },
+    {
+      "week": 5,
+      "kpi_index": 19,
+      "value_num": 11,
+      "value_text": ""
+    },
+    {
+      "week": 5,
+      "kpi_index": 20,
+      "value_num": "",
+      "value_text": "Afghanistan x2, Angola x1, Dominican Republic x1, El Salvador x1, Ghanaian x1, Guinea-Bissau x1, Kenya x1, Mali x1, Somalia x1, Sudan x2, Sri Lanka x1, Saudi Arabia x1"
+    },
+    {
+      "week": 5,
+      "kpi_index": 21,
+      "value_num": "",
+      "value_text": "N/A"
+    },
+    {
+      "week": 5,
+      "kpi_index": 22,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 5,
+      "kpi_index": 23,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 5,
+      "kpi_index": 24,
+      "value_num": 3,
+      "value_text": ""
+    },
+    {
+      "week": 5,
+      "kpi_index": 25,
+      "value_num": 1560,
+      "value_text": ""
+    },
+    {
+      "week": 5,
+      "kpi_index": 26,
+      "value_num": 1550,
+      "value_text": ""
+    },
+    {
+      "week": 5,
+      "kpi_index": 27,
+      "value_num": 1545,
+      "value_text": ""
+    },
+    {
+      "week": 5,
+      "kpi_index": 28,
+      "value_num": 90,
+      "value_text": ""
+    },
+    {
+      "week": 6,
+      "kpi_index": 0,
+      "value_num": 94,
+      "value_text": ""
+    },
+    {
+      "week": 6,
+      "kpi_index": 1,
+      "value_num": 7632.8,
+      "value_text": ""
+    },
+    {
+      "week": 6,
+      "kpi_index": 3,
+      "value_num": 57,
+      "value_text": ""
+    },
+    {
+      "week": 6,
+      "kpi_index": 4,
+      "value_num": 37,
+      "value_text": ""
+    },
+    {
+      "week": 6,
+      "kpi_index": 5,
+      "value_num": 94,
+      "value_text": ""
+    },
+    {
+      "week": 6,
+      "kpi_index": 6,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 6,
+      "kpi_index": 7,
+      "value_num": 31,
+      "value_text": ""
+    },
+    {
+      "week": 6,
+      "kpi_index": 8,
+      "value_num": 35,
+      "value_text": ""
+    },
+    {
+      "week": 6,
+      "kpi_index": 9,
+      "value_num": 18,
+      "value_text": ""
+    },
+    {
+      "week": 6,
+      "kpi_index": 10,
+      "value_num": 6,
+      "value_text": ""
+    },
+    {
+      "week": 6,
+      "kpi_index": 11,
+      "value_num": 4,
+      "value_text": ""
+    },
+    {
+      "week": 6,
+      "kpi_index": 12,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 6,
+      "kpi_index": 13,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 6,
+      "kpi_index": 14,
+      "value_num": 5,
+      "value_text": ""
+    },
+    {
+      "week": 6,
+      "kpi_index": 15,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 6,
+      "kpi_index": 16,
+      "value_num": 39,
+      "value_text": ""
+    },
+    {
+      "week": 6,
+      "kpi_index": 17,
+      "value_num": 8,
+      "value_text": ""
+    },
+    {
+      "week": 6,
+      "kpi_index": 18,
+      "value_num": 28,
+      "value_text": ""
+    },
+    {
+      "week": 6,
+      "kpi_index": 19,
+      "value_num": 11,
+      "value_text": ""
+    },
+    {
+      "week": 6,
+      "kpi_index": 20,
+      "value_num": "",
+      "value_text": "Afghanistan x2, Angola x1, Dominican Republic x1, El Salvador x1, Ghanaian x1, Guinea-Bissau x1, Kenya x1, Mali x1, Somalia x1, Sudan x2, Sri Lanka x1, Saudi Arabia x1"
+    },
+    {
+      "week": 6,
+      "kpi_index": 21,
+      "value_num": "",
+      "value_text": "N/A"
+    },
+    {
+      "week": 6,
+      "kpi_index": 22,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 6,
+      "kpi_index": 23,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 6,
+      "kpi_index": 24,
+      "value_num": 4,
+      "value_text": ""
+    },
+    {
+      "week": 6,
+      "kpi_index": 25,
+      "value_num": 1590,
+      "value_text": ""
+    },
+    {
+      "week": 6,
+      "kpi_index": 26,
+      "value_num": 1580,
+      "value_text": ""
+    },
+    {
+      "week": 6,
+      "kpi_index": 27,
+      "value_num": 1575,
+      "value_text": ""
+    },
+    {
+      "week": 6,
+      "kpi_index": 28,
+      "value_num": 91,
+      "value_text": ""
+    },
+    {
+      "week": 7,
+      "kpi_index": 0,
+      "value_num": 95,
+      "value_text": ""
+    },
+    {
+      "week": 7,
+      "kpi_index": 1,
+      "value_num": 7695.0,
+      "value_text": ""
+    },
+    {
+      "week": 7,
+      "kpi_index": 3,
+      "value_num": 57,
+      "value_text": ""
+    },
+    {
+      "week": 7,
+      "kpi_index": 4,
+      "value_num": 38,
+      "value_text": ""
+    },
+    {
+      "week": 7,
+      "kpi_index": 5,
+      "value_num": 95,
+      "value_text": ""
+    },
+    {
+      "week": 7,
+      "kpi_index": 6,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 7,
+      "kpi_index": 7,
+      "value_num": 31,
+      "value_text": ""
+    },
+    {
+      "week": 7,
+      "kpi_index": 8,
+      "value_num": 36,
+      "value_text": ""
+    },
+    {
+      "week": 7,
+      "kpi_index": 9,
+      "value_num": 18,
+      "value_text": ""
+    },
+    {
+      "week": 7,
+      "kpi_index": 10,
+      "value_num": 6,
+      "value_text": ""
+    },
+    {
+      "week": 7,
+      "kpi_index": 11,
+      "value_num": 4,
+      "value_text": ""
+    },
+    {
+      "week": 7,
+      "kpi_index": 12,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 7,
+      "kpi_index": 13,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 7,
+      "kpi_index": 14,
+      "value_num": 5,
+      "value_text": ""
+    },
+    {
+      "week": 7,
+      "kpi_index": 15,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 7,
+      "kpi_index": 16,
+      "value_num": 40,
+      "value_text": ""
+    },
+    {
+      "week": 7,
+      "kpi_index": 17,
+      "value_num": 8,
+      "value_text": ""
+    },
+    {
+      "week": 7,
+      "kpi_index": 18,
+      "value_num": 28,
+      "value_text": ""
+    },
+    {
+      "week": 7,
+      "kpi_index": 19,
+      "value_num": 11,
+      "value_text": ""
+    },
+    {
+      "week": 7,
+      "kpi_index": 20,
+      "value_num": "",
+      "value_text": "Afghanistan x2, Angola x1, Dominican Republic x1, El Salvador x1, Ghanaian x1, Guinea-Bissau x1, Kenya x1, Mali x1, Somalia x1, Sudan x2, Sri Lanka x1, Saudi Arabia x1"
+    },
+    {
+      "week": 7,
+      "kpi_index": 21,
+      "value_num": "",
+      "value_text": "N/A"
+    },
+    {
+      "week": 7,
+      "kpi_index": 22,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 7,
+      "kpi_index": 23,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 7,
+      "kpi_index": 24,
+      "value_num": 6,
+      "value_text": ""
+    },
+    {
+      "week": 7,
+      "kpi_index": 25,
+      "value_num": 1610,
+      "value_text": ""
+    },
+    {
+      "week": 7,
+      "kpi_index": 26,
+      "value_num": 1605,
+      "value_text": ""
+    },
+    {
+      "week": 7,
+      "kpi_index": 27,
+      "value_num": 1600,
+      "value_text": ""
+    },
+    {
+      "week": 7,
+      "kpi_index": 28,
+      "value_num": 92,
+      "value_text": ""
+    },
+    {
+      "week": 8,
+      "kpi_index": 0,
+      "value_num": 95,
+      "value_text": ""
+    },
+    {
+      "week": 8,
+      "kpi_index": 1,
+      "value_num": 7676.0,
+      "value_text": ""
+    },
+    {
+      "week": 8,
+      "kpi_index": 3,
+      "value_num": 57,
+      "value_text": ""
+    },
+    {
+      "week": 8,
+      "kpi_index": 4,
+      "value_num": 38,
+      "value_text": ""
+    },
+    {
+      "week": 8,
+      "kpi_index": 5,
+      "value_num": 95,
+      "value_text": ""
+    },
+    {
+      "week": 8,
+      "kpi_index": 6,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 8,
+      "kpi_index": 7,
+      "value_num": 31,
+      "value_text": ""
+    },
+    {
+      "week": 8,
+      "kpi_index": 8,
+      "value_num": 36,
+      "value_text": ""
+    },
+    {
+      "week": 8,
+      "kpi_index": 9,
+      "value_num": 18,
+      "value_text": ""
+    },
+    {
+      "week": 8,
+      "kpi_index": 10,
+      "value_num": 6,
+      "value_text": ""
+    },
+    {
+      "week": 8,
+      "kpi_index": 11,
+      "value_num": 4,
+      "value_text": ""
+    },
+    {
+      "week": 8,
+      "kpi_index": 12,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 8,
+      "kpi_index": 13,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 8,
+      "kpi_index": 14,
+      "value_num": 5,
+      "value_text": ""
+    },
+    {
+      "week": 8,
+      "kpi_index": 15,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 8,
+      "kpi_index": 16,
+      "value_num": 40,
+      "value_text": ""
+    },
+    {
+      "week": 8,
+      "kpi_index": 17,
+      "value_num": 8,
+      "value_text": ""
+    },
+    {
+      "week": 8,
+      "kpi_index": 18,
+      "value_num": 28,
+      "value_text": ""
+    },
+    {
+      "week": 8,
+      "kpi_index": 19,
+      "value_num": 11,
+      "value_text": ""
+    },
+    {
+      "week": 8,
+      "kpi_index": 20,
+      "value_num": "",
+      "value_text": "Afghanistan x2, Angola x1, Dominican Republic x1, El Salvador x1, Ghanaian x1, Guinea-Bissau x1, Kenya x1, Mali x1, Somalia x1, Sudan x2, Sri Lanka x1, Saudi Arabia x1"
+    },
+    {
+      "week": 8,
+      "kpi_index": 21,
+      "value_num": "",
+      "value_text": "N/A"
+    },
+    {
+      "week": 8,
+      "kpi_index": 22,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 8,
+      "kpi_index": 23,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 8,
+      "kpi_index": 24,
+      "value_num": 3,
+      "value_text": ""
+    },
+    {
+      "week": 8,
+      "kpi_index": 25,
+      "value_num": 1620,
+      "value_text": ""
+    },
+    {
+      "week": 8,
+      "kpi_index": 26,
+      "value_num": 1610,
+      "value_text": ""
+    },
+    {
+      "week": 8,
+      "kpi_index": 27,
+      "value_num": 1595,
+      "value_text": ""
+    },
+    {
+      "week": 8,
+      "kpi_index": 28,
+      "value_num": 93,
+      "value_text": ""
+    },
+    {
+      "week": 8,
+      "kpi_index": 29,
+      "value_num": "",
+      "value_text": "PPE shortage flagged Wed shift \u2014 resolved next day with additional stock delivery."
+    },
+    {
+      "week": 9,
+      "kpi_index": 0,
+      "value_num": 96,
+      "value_text": ""
+    },
+    {
+      "week": 9,
+      "kpi_index": 1,
+      "value_num": 7824.0,
+      "value_text": ""
+    },
+    {
+      "week": 9,
+      "kpi_index": 3,
+      "value_num": 58,
+      "value_text": ""
+    },
+    {
+      "week": 9,
+      "kpi_index": 4,
+      "value_num": 38,
+      "value_text": ""
+    },
+    {
+      "week": 9,
+      "kpi_index": 5,
+      "value_num": 96,
+      "value_text": ""
+    },
+    {
+      "week": 9,
+      "kpi_index": 6,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 9,
+      "kpi_index": 7,
+      "value_num": 31,
+      "value_text": ""
+    },
+    {
+      "week": 9,
+      "kpi_index": 8,
+      "value_num": 36,
+      "value_text": ""
+    },
+    {
+      "week": 9,
+      "kpi_index": 9,
+      "value_num": 18,
+      "value_text": ""
+    },
+    {
+      "week": 9,
+      "kpi_index": 10,
+      "value_num": 6,
+      "value_text": ""
+    },
+    {
+      "week": 9,
+      "kpi_index": 11,
+      "value_num": 5,
+      "value_text": ""
+    },
+    {
+      "week": 9,
+      "kpi_index": 12,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 9,
+      "kpi_index": 13,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 9,
+      "kpi_index": 14,
+      "value_num": 5,
+      "value_text": ""
+    },
+    {
+      "week": 9,
+      "kpi_index": 15,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 9,
+      "kpi_index": 16,
+      "value_num": 40,
+      "value_text": ""
+    },
+    {
+      "week": 9,
+      "kpi_index": 17,
+      "value_num": 9,
+      "value_text": ""
+    },
+    {
+      "week": 9,
+      "kpi_index": 18,
+      "value_num": 29,
+      "value_text": ""
+    },
+    {
+      "week": 9,
+      "kpi_index": 19,
+      "value_num": 10,
+      "value_text": ""
+    },
+    {
+      "week": 9,
+      "kpi_index": 20,
+      "value_num": "",
+      "value_text": "Afghanistan x2, Angola x1, Dominican Republic x1, El Salvador x1, Ghanaian x1, Guinea-Bissau x1, Kenya x1, Mali x1, Somalia x1, Sudan x2, Sri Lanka x1, Saudi Arabia x1"
+    },
+    {
+      "week": 9,
+      "kpi_index": 21,
+      "value_num": "",
+      "value_text": "N/A"
+    },
+    {
+      "week": 9,
+      "kpi_index": 22,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 9,
+      "kpi_index": 23,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 9,
+      "kpi_index": 24,
+      "value_num": 5,
+      "value_text": ""
+    },
+    {
+      "week": 9,
+      "kpi_index": 25,
+      "value_num": 1630,
+      "value_text": ""
+    },
+    {
+      "week": 9,
+      "kpi_index": 26,
+      "value_num": 1625,
+      "value_text": ""
+    },
+    {
+      "week": 9,
+      "kpi_index": 27,
+      "value_num": 1620,
+      "value_text": ""
+    },
+    {
+      "week": 9,
+      "kpi_index": 28,
+      "value_num": 93,
+      "value_text": ""
+    },
+    {
+      "week": 10,
+      "kpi_index": 0,
+      "value_num": 97,
+      "value_text": ""
+    },
+    {
+      "week": 10,
+      "kpi_index": 1,
+      "value_num": 7886.1,
+      "value_text": ""
+    },
+    {
+      "week": 10,
+      "kpi_index": 3,
+      "value_num": 59,
+      "value_text": ""
+    },
+    {
+      "week": 10,
+      "kpi_index": 4,
+      "value_num": 38,
+      "value_text": ""
+    },
+    {
+      "week": 10,
+      "kpi_index": 5,
+      "value_num": 97,
+      "value_text": ""
+    },
+    {
+      "week": 10,
+      "kpi_index": 6,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 10,
+      "kpi_index": 7,
+      "value_num": 32,
+      "value_text": ""
+    },
+    {
+      "week": 10,
+      "kpi_index": 8,
+      "value_num": 36,
+      "value_text": ""
+    },
+    {
+      "week": 10,
+      "kpi_index": 9,
+      "value_num": 18,
+      "value_text": ""
+    },
+    {
+      "week": 10,
+      "kpi_index": 10,
+      "value_num": 6,
+      "value_text": ""
+    },
+    {
+      "week": 10,
+      "kpi_index": 11,
+      "value_num": 5,
+      "value_text": ""
+    },
+    {
+      "week": 10,
+      "kpi_index": 12,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 10,
+      "kpi_index": 13,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 10,
+      "kpi_index": 14,
+      "value_num": 5,
+      "value_text": ""
+    },
+    {
+      "week": 10,
+      "kpi_index": 15,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 10,
+      "kpi_index": 16,
+      "value_num": 40,
+      "value_text": ""
+    },
+    {
+      "week": 10,
+      "kpi_index": 17,
+      "value_num": 9,
+      "value_text": ""
+    },
+    {
+      "week": 10,
+      "kpi_index": 18,
+      "value_num": 29,
+      "value_text": ""
+    },
+    {
+      "week": 10,
+      "kpi_index": 19,
+      "value_num": 11,
+      "value_text": ""
+    },
+    {
+      "week": 10,
+      "kpi_index": 20,
+      "value_num": "",
+      "value_text": "Afghanistan x2, Angola x1, Dominican Republic x1, El Salvador x1, Ghanaian x1, Guinea-Bissau x1, Kenya x1, Mali x1, Somalia x1, Sudan x2, Sri Lanka x1, Saudi Arabia x1"
+    },
+    {
+      "week": 10,
+      "kpi_index": 21,
+      "value_num": "",
+      "value_text": "N/A"
+    },
+    {
+      "week": 10,
+      "kpi_index": 22,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 10,
+      "kpi_index": 23,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 10,
+      "kpi_index": 24,
+      "value_num": 4,
+      "value_text": ""
+    },
+    {
+      "week": 10,
+      "kpi_index": 25,
+      "value_num": 1640,
+      "value_text": ""
+    },
+    {
+      "week": 10,
+      "kpi_index": 26,
+      "value_num": 1635,
+      "value_text": ""
+    },
+    {
+      "week": 10,
+      "kpi_index": 27,
+      "value_num": 1630,
+      "value_text": ""
+    },
+    {
+      "week": 10,
+      "kpi_index": 28,
+      "value_num": 94,
+      "value_text": ""
+    },
+    {
+      "week": 11,
+      "kpi_index": 0,
+      "value_num": 98,
+      "value_text": ""
+    },
+    {
+      "week": 11,
+      "kpi_index": 1,
+      "value_num": 8016.4,
+      "value_text": ""
+    },
+    {
+      "week": 11,
+      "kpi_index": 3,
+      "value_num": 59,
+      "value_text": ""
+    },
+    {
+      "week": 11,
+      "kpi_index": 4,
+      "value_num": 39,
+      "value_text": ""
+    },
+    {
+      "week": 11,
+      "kpi_index": 5,
+      "value_num": 98,
+      "value_text": ""
+    },
+    {
+      "week": 11,
+      "kpi_index": 6,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 11,
+      "kpi_index": 7,
+      "value_num": 32,
+      "value_text": ""
+    },
+    {
+      "week": 11,
+      "kpi_index": 8,
+      "value_num": 37,
+      "value_text": ""
+    },
+    {
+      "week": 11,
+      "kpi_index": 9,
+      "value_num": 18,
+      "value_text": ""
+    },
+    {
+      "week": 11,
+      "kpi_index": 10,
+      "value_num": 6,
+      "value_text": ""
+    },
+    {
+      "week": 11,
+      "kpi_index": 11,
+      "value_num": 5,
+      "value_text": ""
+    },
+    {
+      "week": 11,
+      "kpi_index": 12,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 11,
+      "kpi_index": 13,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 11,
+      "kpi_index": 14,
+      "value_num": 5,
+      "value_text": ""
+    },
+    {
+      "week": 11,
+      "kpi_index": 15,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 11,
+      "kpi_index": 16,
+      "value_num": 41,
+      "value_text": ""
+    },
+    {
+      "week": 11,
+      "kpi_index": 17,
+      "value_num": 9,
+      "value_text": ""
+    },
+    {
+      "week": 11,
+      "kpi_index": 18,
+      "value_num": 29,
+      "value_text": ""
+    },
+    {
+      "week": 11,
+      "kpi_index": 19,
+      "value_num": 11,
+      "value_text": ""
+    },
+    {
+      "week": 11,
+      "kpi_index": 20,
+      "value_num": "",
+      "value_text": "Afghanistan x2, Angola x1, Dominican Republic x1, El Salvador x1, Ghanaian x1, Guinea-Bissau x1, Kenya x1, Mali x1, Somalia x1, Sudan x2, Sri Lanka x1, Saudi Arabia x1"
+    },
+    {
+      "week": 11,
+      "kpi_index": 21,
+      "value_num": "",
+      "value_text": "N/A"
+    },
+    {
+      "week": 11,
+      "kpi_index": 22,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 11,
+      "kpi_index": 23,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 11,
+      "kpi_index": 24,
+      "value_num": 7,
+      "value_text": ""
+    },
+    {
+      "week": 11,
+      "kpi_index": 25,
+      "value_num": 1650,
+      "value_text": ""
+    },
+    {
+      "week": 11,
+      "kpi_index": 26,
+      "value_num": 1645,
+      "value_text": ""
+    },
+    {
+      "week": 11,
+      "kpi_index": 27,
+      "value_num": 1645,
+      "value_text": ""
+    },
+    {
+      "week": 11,
+      "kpi_index": 28,
+      "value_num": 95,
+      "value_text": ""
+    },
+    {
+      "week": 12,
+      "kpi_index": 0,
+      "value_num": 99,
+      "value_text": ""
+    },
+    {
+      "week": 12,
+      "kpi_index": 1,
+      "value_num": 8068.5,
+      "value_text": ""
+    },
+    {
+      "week": 12,
+      "kpi_index": 3,
+      "value_num": 60,
+      "value_text": ""
+    },
+    {
+      "week": 12,
+      "kpi_index": 4,
+      "value_num": 39,
+      "value_text": ""
+    },
+    {
+      "week": 12,
+      "kpi_index": 5,
+      "value_num": 99,
+      "value_text": ""
+    },
+    {
+      "week": 12,
+      "kpi_index": 6,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 12,
+      "kpi_index": 7,
+      "value_num": 32,
+      "value_text": ""
+    },
+    {
+      "week": 12,
+      "kpi_index": 8,
+      "value_num": 37,
+      "value_text": ""
+    },
+    {
+      "week": 12,
+      "kpi_index": 9,
+      "value_num": 19,
+      "value_text": ""
+    },
+    {
+      "week": 12,
+      "kpi_index": 10,
+      "value_num": 6,
+      "value_text": ""
+    },
+    {
+      "week": 12,
+      "kpi_index": 11,
+      "value_num": 5,
+      "value_text": ""
+    },
+    {
+      "week": 12,
+      "kpi_index": 12,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 12,
+      "kpi_index": 13,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 12,
+      "kpi_index": 14,
+      "value_num": 5,
+      "value_text": ""
+    },
+    {
+      "week": 12,
+      "kpi_index": 15,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 12,
+      "kpi_index": 16,
+      "value_num": 41,
+      "value_text": ""
+    },
+    {
+      "week": 12,
+      "kpi_index": 17,
+      "value_num": 9,
+      "value_text": ""
+    },
+    {
+      "week": 12,
+      "kpi_index": 18,
+      "value_num": 29,
+      "value_text": ""
+    },
+    {
+      "week": 12,
+      "kpi_index": 19,
+      "value_num": 12,
+      "value_text": ""
+    },
+    {
+      "week": 12,
+      "kpi_index": 20,
+      "value_num": "",
+      "value_text": "Afghanistan x2, Angola x1, Dominican Republic x1, El Salvador x1, Ghanaian x1, Guinea-Bissau x1, Kenya x1, Mali x1, Somalia x1, Sudan x2, Sri Lanka x1, Saudi Arabia x1"
+    },
+    {
+      "week": 12,
+      "kpi_index": 21,
+      "value_num": "",
+      "value_text": "N/A"
+    },
+    {
+      "week": 12,
+      "kpi_index": 22,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 12,
+      "kpi_index": 23,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 12,
+      "kpi_index": 24,
+      "value_num": 5,
+      "value_text": ""
+    },
+    {
+      "week": 12,
+      "kpi_index": 25,
+      "value_num": 1655,
+      "value_text": ""
+    },
+    {
+      "week": 12,
+      "kpi_index": 26,
+      "value_num": 1650,
+      "value_text": ""
+    },
+    {
+      "week": 12,
+      "kpi_index": 27,
+      "value_num": 1635,
+      "value_text": ""
+    },
+    {
+      "week": 12,
+      "kpi_index": 28,
+      "value_num": 96,
+      "value_text": ""
+    },
+    {
+      "week": 12,
+      "kpi_index": 29,
+      "value_num": "",
+      "value_text": "Three late arrivals reported on Mon night shift \u2014 coached individually."
+    },
+    {
+      "week": 13,
+      "kpi_index": 0,
+      "value_num": 100,
+      "value_text": ""
+    },
+    {
+      "week": 13,
+      "kpi_index": 1,
+      "value_num": 8160.0,
+      "value_text": ""
+    },
+    {
+      "week": 13,
+      "kpi_index": 3,
+      "value_num": 60,
+      "value_text": ""
+    },
+    {
+      "week": 13,
+      "kpi_index": 4,
+      "value_num": 40,
+      "value_text": ""
+    },
+    {
+      "week": 13,
+      "kpi_index": 5,
+      "value_num": 100,
+      "value_text": ""
+    },
+    {
+      "week": 13,
+      "kpi_index": 6,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 13,
+      "kpi_index": 7,
+      "value_num": 33,
+      "value_text": ""
+    },
+    {
+      "week": 13,
+      "kpi_index": 8,
+      "value_num": 38,
+      "value_text": ""
+    },
+    {
+      "week": 13,
+      "kpi_index": 9,
+      "value_num": 19,
+      "value_text": ""
+    },
+    {
+      "week": 13,
+      "kpi_index": 10,
+      "value_num": 6,
+      "value_text": ""
+    },
+    {
+      "week": 13,
+      "kpi_index": 11,
+      "value_num": 4,
+      "value_text": ""
+    },
+    {
+      "week": 13,
+      "kpi_index": 12,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 13,
+      "kpi_index": 13,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 13,
+      "kpi_index": 14,
+      "value_num": 5,
+      "value_text": ""
+    },
+    {
+      "week": 13,
+      "kpi_index": 15,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 13,
+      "kpi_index": 16,
+      "value_num": 42,
+      "value_text": ""
+    },
+    {
+      "week": 13,
+      "kpi_index": 17,
+      "value_num": 9,
+      "value_text": ""
+    },
+    {
+      "week": 13,
+      "kpi_index": 18,
+      "value_num": 30,
+      "value_text": ""
+    },
+    {
+      "week": 13,
+      "kpi_index": 19,
+      "value_num": 11,
+      "value_text": ""
+    },
+    {
+      "week": 13,
+      "kpi_index": 20,
+      "value_num": "",
+      "value_text": "Afghanistan x2, Angola x1, Dominican Republic x1, El Salvador x1, Ghanaian x1, Guinea-Bissau x1, Kenya x1, Mali x1, Somalia x1, Sudan x2, Sri Lanka x1, Saudi Arabia x1"
+    },
+    {
+      "week": 13,
+      "kpi_index": 21,
+      "value_num": "",
+      "value_text": "N/A"
+    },
+    {
+      "week": 13,
+      "kpi_index": 22,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 13,
+      "kpi_index": 23,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 13,
+      "kpi_index": 24,
+      "value_num": 6,
+      "value_text": ""
+    },
+    {
+      "week": 13,
+      "kpi_index": 25,
+      "value_num": 1660,
+      "value_text": ""
+    },
+    {
+      "week": 13,
+      "kpi_index": 26,
+      "value_num": 1655,
+      "value_text": ""
+    },
+    {
+      "week": 13,
+      "kpi_index": 27,
+      "value_num": 1655,
+      "value_text": ""
+    },
+    {
+      "week": 13,
+      "kpi_index": 28,
+      "value_num": 97,
+      "value_text": ""
+    },
+    {
+      "week": 14,
+      "kpi_index": 0,
+      "value_num": 100,
+      "value_text": ""
+    },
+    {
+      "week": 14,
+      "kpi_index": 1,
+      "value_num": 8190.0,
+      "value_text": ""
+    },
+    {
+      "week": 14,
+      "kpi_index": 3,
+      "value_num": 60,
+      "value_text": ""
+    },
+    {
+      "week": 14,
+      "kpi_index": 4,
+      "value_num": 40,
+      "value_text": ""
+    },
+    {
+      "week": 14,
+      "kpi_index": 5,
+      "value_num": 100,
+      "value_text": ""
+    },
+    {
+      "week": 14,
+      "kpi_index": 6,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 14,
+      "kpi_index": 7,
+      "value_num": 33,
+      "value_text": ""
+    },
+    {
+      "week": 14,
+      "kpi_index": 8,
+      "value_num": 38,
+      "value_text": ""
+    },
+    {
+      "week": 14,
+      "kpi_index": 9,
+      "value_num": 19,
+      "value_text": ""
+    },
+    {
+      "week": 14,
+      "kpi_index": 10,
+      "value_num": 6,
+      "value_text": ""
+    },
+    {
+      "week": 14,
+      "kpi_index": 11,
+      "value_num": 4,
+      "value_text": ""
+    },
+    {
+      "week": 14,
+      "kpi_index": 12,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 14,
+      "kpi_index": 13,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 14,
+      "kpi_index": 14,
+      "value_num": 5,
+      "value_text": ""
+    },
+    {
+      "week": 14,
+      "kpi_index": 15,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 14,
+      "kpi_index": 16,
+      "value_num": 42,
+      "value_text": ""
+    },
+    {
+      "week": 14,
+      "kpi_index": 17,
+      "value_num": 9,
+      "value_text": ""
+    },
+    {
+      "week": 14,
+      "kpi_index": 18,
+      "value_num": 30,
+      "value_text": ""
+    },
+    {
+      "week": 14,
+      "kpi_index": 19,
+      "value_num": 11,
+      "value_text": ""
+    },
+    {
+      "week": 14,
+      "kpi_index": 20,
+      "value_num": "",
+      "value_text": "Afghanistan x2, Angola x1, Dominican Republic x1, El Salvador x1, Ghanaian x1, Guinea-Bissau x1, Kenya x1, Mali x1, Somalia x1, Sudan x2, Sri Lanka x1, Saudi Arabia x1"
+    },
+    {
+      "week": 14,
+      "kpi_index": 21,
+      "value_num": "",
+      "value_text": "N/A"
+    },
+    {
+      "week": 14,
+      "kpi_index": 22,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 14,
+      "kpi_index": 23,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 14,
+      "kpi_index": 24,
+      "value_num": 8,
+      "value_text": ""
+    },
+    {
+      "week": 14,
+      "kpi_index": 25,
+      "value_num": 1665,
+      "value_text": ""
+    },
+    {
+      "week": 14,
+      "kpi_index": 26,
+      "value_num": 1660,
+      "value_text": ""
+    },
+    {
+      "week": 14,
+      "kpi_index": 27,
+      "value_num": 1645,
+      "value_text": ""
+    },
+    {
+      "week": 14,
+      "kpi_index": 28,
+      "value_num": 97,
+      "value_text": ""
+    },
+    {
+      "week": 14,
+      "kpi_index": 29,
+      "value_num": "",
+      "value_text": "One minor cut on packing line \u2014 first aid administered, RIDDOR not required. Induction process review requested by CCF site lead."
+    },
+    {
+      "week": 15,
+      "kpi_index": 0,
+      "value_num": 100,
+      "value_text": ""
+    },
+    {
+      "week": 15,
+      "kpi_index": 1,
+      "value_num": 8200.0,
+      "value_text": ""
+    },
+    {
+      "week": 15,
+      "kpi_index": 3,
+      "value_num": 60,
+      "value_text": ""
+    },
+    {
+      "week": 15,
+      "kpi_index": 4,
+      "value_num": 40,
+      "value_text": ""
+    },
+    {
+      "week": 15,
+      "kpi_index": 5,
+      "value_num": 100,
+      "value_text": ""
+    },
+    {
+      "week": 15,
+      "kpi_index": 6,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 15,
+      "kpi_index": 7,
+      "value_num": 33,
+      "value_text": ""
+    },
+    {
+      "week": 15,
+      "kpi_index": 8,
+      "value_num": 38,
+      "value_text": ""
+    },
+    {
+      "week": 15,
+      "kpi_index": 9,
+      "value_num": 19,
+      "value_text": ""
+    },
+    {
+      "week": 15,
+      "kpi_index": 10,
+      "value_num": 6,
+      "value_text": ""
+    },
+    {
+      "week": 15,
+      "kpi_index": 11,
+      "value_num": 4,
+      "value_text": ""
+    },
+    {
+      "week": 15,
+      "kpi_index": 12,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 15,
+      "kpi_index": 13,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 15,
+      "kpi_index": 14,
+      "value_num": 5,
+      "value_text": ""
+    },
+    {
+      "week": 15,
+      "kpi_index": 15,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 15,
+      "kpi_index": 16,
+      "value_num": 42,
+      "value_text": ""
+    },
+    {
+      "week": 15,
+      "kpi_index": 17,
+      "value_num": 9,
+      "value_text": ""
+    },
+    {
+      "week": 15,
+      "kpi_index": 18,
+      "value_num": 30,
+      "value_text": ""
+    },
+    {
+      "week": 15,
+      "kpi_index": 19,
+      "value_num": 11,
+      "value_text": ""
+    },
+    {
+      "week": 15,
+      "kpi_index": 20,
+      "value_num": "",
+      "value_text": "Afghanistan x2, Angola x1, Dominican Republic x1, El Salvador x1, Ghanaian x1, Guinea-Bissau x1, Kenya x1, Mali x1, Somalia x1, Sudan x2, Sri Lanka x1, Saudi Arabia x1"
+    },
+    {
+      "week": 15,
+      "kpi_index": 21,
+      "value_num": "",
+      "value_text": "N/A"
+    },
+    {
+      "week": 15,
+      "kpi_index": 22,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 15,
+      "kpi_index": 23,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 15,
+      "kpi_index": 24,
+      "value_num": 7,
+      "value_text": ""
+    },
+    {
+      "week": 15,
+      "kpi_index": 25,
+      "value_num": 1660,
+      "value_text": ""
+    },
+    {
+      "week": 15,
+      "kpi_index": 26,
+      "value_num": 1660,
+      "value_text": ""
+    },
+    {
+      "week": 15,
+      "kpi_index": 27,
+      "value_num": 1660,
+      "value_text": ""
+    },
+    {
+      "week": 15,
+      "kpi_index": 28,
+      "value_num": 98,
+      "value_text": ""
+    },
+    {
+      "week": 16,
+      "kpi_index": 0,
+      "value_num": 101,
+      "value_text": ""
+    },
+    {
+      "week": 16,
+      "kpi_index": 1,
+      "value_num": 8227.46,
+      "value_text": ""
+    },
+    {
+      "week": 16,
+      "kpi_index": 3,
+      "value_num": 61,
+      "value_text": ""
+    },
+    {
+      "week": 16,
+      "kpi_index": 4,
+      "value_num": 40,
+      "value_text": ""
+    },
+    {
+      "week": 16,
+      "kpi_index": 5,
+      "value_num": 101,
+      "value_text": ""
+    },
+    {
+      "week": 16,
+      "kpi_index": 6,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 16,
+      "kpi_index": 7,
+      "value_num": 33,
+      "value_text": ""
+    },
+    {
+      "week": 16,
+      "kpi_index": 8,
+      "value_num": 38,
+      "value_text": ""
+    },
+    {
+      "week": 16,
+      "kpi_index": 9,
+      "value_num": 19,
+      "value_text": ""
+    },
+    {
+      "week": 16,
+      "kpi_index": 10,
+      "value_num": 6,
+      "value_text": ""
+    },
+    {
+      "week": 16,
+      "kpi_index": 11,
+      "value_num": 5,
+      "value_text": ""
+    },
+    {
+      "week": 16,
+      "kpi_index": 12,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 16,
+      "kpi_index": 13,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 16,
+      "kpi_index": 14,
+      "value_num": 5,
+      "value_text": ""
+    },
+    {
+      "week": 16,
+      "kpi_index": 15,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 16,
+      "kpi_index": 16,
+      "value_num": 42,
+      "value_text": ""
+    },
+    {
+      "week": 16,
+      "kpi_index": 17,
+      "value_num": 9,
+      "value_text": ""
+    },
+    {
+      "week": 16,
+      "kpi_index": 18,
+      "value_num": 30,
+      "value_text": ""
+    },
+    {
+      "week": 16,
+      "kpi_index": 19,
+      "value_num": 12,
+      "value_text": ""
+    },
+    {
+      "week": 16,
+      "kpi_index": 20,
+      "value_num": "",
+      "value_text": "Afghanistan x2, Angola x1, Dominican Republic x1, El Salvador x1, Ghanaian x1, Guinea-Bissau x1, Kenya x1, Mali x1, Somalia x1, Sudan x2, Sri Lanka x1, Saudi Arabia x1"
+    },
+    {
+      "week": 16,
+      "kpi_index": 21,
+      "value_num": "",
+      "value_text": "N/A"
+    },
+    {
+      "week": 16,
+      "kpi_index": 22,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 16,
+      "kpi_index": 23,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 16,
+      "kpi_index": 24,
+      "value_num": 12,
+      "value_text": ""
+    },
+    {
+      "week": 16,
+      "kpi_index": 25,
+      "value_num": 1664,
+      "value_text": ""
+    },
+    {
+      "week": 16,
+      "kpi_index": 26,
+      "value_num": 1664,
+      "value_text": ""
+    },
+    {
+      "week": 16,
+      "kpi_index": 27,
+      "value_num": 1664,
+      "value_text": ""
+    },
+    {
+      "week": 16,
+      "kpi_index": 28,
+      "value_num": 99,
+      "value_text": ""
+    },
+    {
+      "week": 17,
+      "kpi_index": 0,
+      "value_num": 101,
+      "value_text": ""
+    },
+    {
+      "week": 17,
+      "kpi_index": 1,
+      "value_num": 8261.8,
+      "value_text": ""
+    },
+    {
+      "week": 17,
+      "kpi_index": 3,
+      "value_num": 61,
+      "value_text": ""
+    },
+    {
+      "week": 17,
+      "kpi_index": 4,
+      "value_num": 40,
+      "value_text": ""
+    },
+    {
+      "week": 17,
+      "kpi_index": 5,
+      "value_num": 101,
+      "value_text": ""
+    },
+    {
+      "week": 17,
+      "kpi_index": 6,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 17,
+      "kpi_index": 7,
+      "value_num": 33,
+      "value_text": ""
+    },
+    {
+      "week": 17,
+      "kpi_index": 8,
+      "value_num": 38,
+      "value_text": ""
+    },
+    {
+      "week": 17,
+      "kpi_index": 9,
+      "value_num": 19,
+      "value_text": ""
+    },
+    {
+      "week": 17,
+      "kpi_index": 10,
+      "value_num": 6,
+      "value_text": ""
+    },
+    {
+      "week": 17,
+      "kpi_index": 11,
+      "value_num": 5,
+      "value_text": ""
+    },
+    {
+      "week": 17,
+      "kpi_index": 12,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 17,
+      "kpi_index": 13,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 17,
+      "kpi_index": 14,
+      "value_num": 5,
+      "value_text": ""
+    },
+    {
+      "week": 17,
+      "kpi_index": 15,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 17,
+      "kpi_index": 16,
+      "value_num": 42,
+      "value_text": ""
+    },
+    {
+      "week": 17,
+      "kpi_index": 17,
+      "value_num": 9,
+      "value_text": ""
+    },
+    {
+      "week": 17,
+      "kpi_index": 18,
+      "value_num": 30,
+      "value_text": ""
+    },
+    {
+      "week": 17,
+      "kpi_index": 19,
+      "value_num": 12,
+      "value_text": ""
+    },
+    {
+      "week": 17,
+      "kpi_index": 20,
+      "value_num": "",
+      "value_text": "Afghanistan x2, Angola x1, Dominican Republic x1, El Salvador x1, Ghanaian x1, Guinea-Bissau x1, Kenya x1, Mali x1, Somalia x1, Sudan x2, Sri Lanka x1, Saudi Arabia x1"
+    },
+    {
+      "week": 17,
+      "kpi_index": 21,
+      "value_num": "",
+      "value_text": "N/A"
+    },
+    {
+      "week": 17,
+      "kpi_index": 22,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 17,
+      "kpi_index": 23,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 17,
+      "kpi_index": 24,
+      "value_num": 6,
+      "value_text": ""
+    },
+    {
+      "week": 17,
+      "kpi_index": 25,
+      "value_num": 1670,
+      "value_text": ""
+    },
+    {
+      "week": 17,
+      "kpi_index": 26,
+      "value_num": 1665,
+      "value_text": ""
+    },
+    {
+      "week": 17,
+      "kpi_index": 27,
+      "value_num": 1660,
+      "value_text": ""
+    },
+    {
+      "week": 17,
+      "kpi_index": 28,
+      "value_num": 99,
+      "value_text": ""
+    },
+    {
+      "week": 17,
+      "kpi_index": 29,
+      "value_num": "",
+      "value_text": "Positive feedback received from CCF production manager regarding agency punctuality."
+    },
+    {
+      "week": 18,
+      "kpi_index": 0,
+      "value_num": 99,
+      "value_text": ""
+    },
+    {
+      "week": 18,
+      "kpi_index": 1,
+      "value_num": 7999.2,
+      "value_text": ""
+    },
+    {
+      "week": 18,
+      "kpi_index": 3,
+      "value_num": 60,
+      "value_text": ""
+    },
+    {
+      "week": 18,
+      "kpi_index": 4,
+      "value_num": 39,
+      "value_text": ""
+    },
+    {
+      "week": 18,
+      "kpi_index": 5,
+      "value_num": 99,
+      "value_text": ""
+    },
+    {
+      "week": 18,
+      "kpi_index": 6,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 18,
+      "kpi_index": 7,
+      "value_num": 32,
+      "value_text": ""
+    },
+    {
+      "week": 18,
+      "kpi_index": 8,
+      "value_num": 37,
+      "value_text": ""
+    },
+    {
+      "week": 18,
+      "kpi_index": 9,
+      "value_num": 19,
+      "value_text": ""
+    },
+    {
+      "week": 18,
+      "kpi_index": 10,
+      "value_num": 6,
+      "value_text": ""
+    },
+    {
+      "week": 18,
+      "kpi_index": 11,
+      "value_num": 5,
+      "value_text": ""
+    },
+    {
+      "week": 18,
+      "kpi_index": 12,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 18,
+      "kpi_index": 13,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 18,
+      "kpi_index": 14,
+      "value_num": 5,
+      "value_text": ""
+    },
+    {
+      "week": 18,
+      "kpi_index": 15,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 18,
+      "kpi_index": 16,
+      "value_num": 41,
+      "value_text": ""
+    },
+    {
+      "week": 18,
+      "kpi_index": 17,
+      "value_num": 9,
+      "value_text": ""
+    },
+    {
+      "week": 18,
+      "kpi_index": 18,
+      "value_num": 29,
+      "value_text": ""
+    },
+    {
+      "week": 18,
+      "kpi_index": 19,
+      "value_num": 12,
+      "value_text": ""
+    },
+    {
+      "week": 18,
+      "kpi_index": 20,
+      "value_num": "",
+      "value_text": "Afghanistan x2, Angola x1, Dominican Republic x1, El Salvador x1, Ghanaian x1, Guinea-Bissau x1, Kenya x1, Mali x1, Somalia x1, Sudan x2, Sri Lanka x1, Saudi Arabia x1"
+    },
+    {
+      "week": 18,
+      "kpi_index": 21,
+      "value_num": "",
+      "value_text": "N/A"
+    },
+    {
+      "week": 18,
+      "kpi_index": 22,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 18,
+      "kpi_index": 23,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 18,
+      "kpi_index": 24,
+      "value_num": 4,
+      "value_text": ""
+    },
+    {
+      "week": 18,
+      "kpi_index": 25,
+      "value_num": 1650,
+      "value_text": ""
+    },
+    {
+      "week": 18,
+      "kpi_index": 26,
+      "value_num": 1640,
+      "value_text": ""
+    },
+    {
+      "week": 18,
+      "kpi_index": 27,
+      "value_num": 1625,
+      "value_text": ""
+    },
+    {
+      "week": 18,
+      "kpi_index": 28,
+      "value_num": 98,
+      "value_text": ""
+    },
+    {
+      "week": 19,
+      "kpi_index": 0,
+      "value_num": 98,
+      "value_text": ""
+    },
+    {
+      "week": 19,
+      "kpi_index": 1,
+      "value_num": 7889.0,
+      "value_text": ""
+    },
+    {
+      "week": 19,
+      "kpi_index": 3,
+      "value_num": 59,
+      "value_text": ""
+    },
+    {
+      "week": 19,
+      "kpi_index": 4,
+      "value_num": 39,
+      "value_text": ""
+    },
+    {
+      "week": 19,
+      "kpi_index": 5,
+      "value_num": 98,
+      "value_text": ""
+    },
+    {
+      "week": 19,
+      "kpi_index": 6,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 19,
+      "kpi_index": 7,
+      "value_num": 32,
+      "value_text": ""
+    },
+    {
+      "week": 19,
+      "kpi_index": 8,
+      "value_num": 37,
+      "value_text": ""
+    },
+    {
+      "week": 19,
+      "kpi_index": 9,
+      "value_num": 18,
+      "value_text": ""
+    },
+    {
+      "week": 19,
+      "kpi_index": 10,
+      "value_num": 6,
+      "value_text": ""
+    },
+    {
+      "week": 19,
+      "kpi_index": 11,
+      "value_num": 5,
+      "value_text": ""
+    },
+    {
+      "week": 19,
+      "kpi_index": 12,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 19,
+      "kpi_index": 13,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 19,
+      "kpi_index": 14,
+      "value_num": 5,
+      "value_text": ""
+    },
+    {
+      "week": 19,
+      "kpi_index": 15,
+      "value_num": 1,
+      "value_text": ""
+    },
+    {
+      "week": 19,
+      "kpi_index": 16,
+      "value_num": 41,
+      "value_text": ""
+    },
+    {
+      "week": 19,
+      "kpi_index": 17,
+      "value_num": 9,
+      "value_text": ""
+    },
+    {
+      "week": 19,
+      "kpi_index": 18,
+      "value_num": 29,
+      "value_text": ""
+    },
+    {
+      "week": 19,
+      "kpi_index": 19,
+      "value_num": 11,
+      "value_text": ""
+    },
+    {
+      "week": 19,
+      "kpi_index": 20,
+      "value_num": "",
+      "value_text": "Afghanistan x2, Angola x1, Dominican Republic x1, El Salvador x1, Ghanaian x1, Guinea-Bissau x1, Kenya x1, Mali x1, Somalia x1, Sudan x2, Sri Lanka x1, Saudi Arabia x1"
+    },
+    {
+      "week": 19,
+      "kpi_index": 21,
+      "value_num": "",
+      "value_text": "N/A"
+    },
+    {
+      "week": 19,
+      "kpi_index": 22,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 19,
+      "kpi_index": 23,
+      "value_num": 0,
+      "value_text": ""
+    },
+    {
+      "week": 19,
+      "kpi_index": 24,
+      "value_num": 5,
+      "value_text": ""
+    },
+    {
+      "week": 19,
+      "kpi_index": 25,
+      "value_num": 1640,
+      "value_text": ""
+    },
+    {
+      "week": 19,
+      "kpi_index": 26,
+      "value_num": 1630,
+      "value_text": ""
+    },
+    {
+      "week": 19,
+      "kpi_index": 27,
+      "value_num": 1620,
+      "value_text": ""
+    },
+    {
+      "week": 19,
+      "kpi_index": 28,
+      "value_num": 97,
+      "value_text": ""
+    }
+  ]
+}

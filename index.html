@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CCF Labour Provider KPI Dashboard | PROMAN</title>
+<style>
+  /* ---------- BRAND TOKENS ---------- */
+  :root {
+    --proman-blue: #003680;
+    --proman-blue-dark: #002659;
+    --proman-blue-light: #1a4d99;
+    --proman-orange: #F58220;
+    --proman-orange-light: #ff9a40;
+    --bg: #f5f6f8;
+    --bg-card: #ffffff;
+    --text: #1a1f2e;
+    --text-muted: #5a6478;
+    --text-light: #8b94a8;
+    --border: #e3e6ec;
+    --border-strong: #c8cdd8;
+    --success: #2d8a4e;
+    --warning: #d49b1c;
+    --danger: #c53030;
+    --tile-shadow: 0 1px 2px rgba(0, 38, 89, 0.06), 0 2px 8px rgba(0, 38, 89, 0.04);
+    --tile-shadow-hover: 0 2px 4px rgba(0, 38, 89, 0.08), 0 8px 24px rgba(0, 38, 89, 0.08);
+    --font-display: "Quatro", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    --font-body: "Quatro", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    --radius: 8px;
+    --radius-lg: 12px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* ---------- HEADER ---------- */
+  .topbar {
+    background: var(--proman-blue);
+    color: white;
+    padding: 14px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 8px rgba(0, 38, 89, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .topbar-left { display: flex; align-items: center; gap: 24px; }
+  .topbar-logo {
+    height: 38px;
+    width: auto;
+    filter: brightness(0) invert(1);
+  }
+  .topbar-title {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+  .topbar-subtitle {
+    font-size: 12px;
+    opacity: 0.8;
+    font-weight: 400;
+  }
+  .topbar-right { display: flex; align-items: center; gap: 20px; }
+  .ccf-logo {
+    background: white;
+    padding: 6px 14px;
+    border-radius: 6px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+  }
+  .ccf-logo img { height: 28px; width: auto; }
+  .last-updated {
+    font-size: 11px;
+    opacity: 0.85;
+    text-align: right;
+    line-height: 1.4;
+  }
+  .last-updated strong { display: block; font-size: 13px; opacity: 1; font-weight: 600; }
+
+  /* ---------- LAYOUT ---------- */
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 24px 32px 48px;
+  }
+
+  /* ---------- PERIOD SELECTOR ---------- */
+  .period-bar {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    box-shadow: var(--tile-shadow);
+  }
+  .period-tabs { display: flex; gap: 4px; background: var(--bg); padding: 4px; border-radius: 8px; }
+  .period-tab {
+    background: transparent;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-muted);
+    transition: all 0.15s ease;
+  }
+  .period-tab:hover { color: var(--proman-blue); }
+  .period-tab.active {
+    background: var(--proman-blue);
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 38, 89, 0.2);
+  }
+  .period-selector-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .period-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    font-weight: 600;
+  }
+  .period-select {
+    background: var(--bg-card);
+    border: 1px solid var(--border-strong);
+    border-radius: 6px;
+    padding: 8px 14px;
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text);
+    cursor: pointer;
+    min-width: 220px;
+    outline: none;
+    transition: border-color 0.15s ease;
+  }
+  .period-select:hover, .period-select:focus { border-color: var(--proman-blue); }
+
+  /* ---------- SECTION TITLES ---------- */
+  .section-title {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin: 28px 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--proman-orange);
+    display: inline-block;
+  }
+  .section-title:first-of-type { margin-top: 0; }
+
+  /* ---------- KPI TILES ---------- */
+  .tiles {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+  .tile {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 18px 20px;
+    box-shadow: var(--tile-shadow);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .tile:hover { box-shadow: var(--tile-shadow-hover); transform: translateY(-1px); }
+  .tile::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--proman-blue);
+  }
+  .tile.accent::before { background: var(--proman-orange); }
+  .tile.warn::before { background: var(--warning); }
+  .tile.danger::before { background: var(--danger); }
+  .tile.success::before { background: var(--success); }
+
+  .tile-label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+  .tile-value {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.1;
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+  .tile-value .unit {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-muted);
+    margin-left: 2px;
+  }
+  .tile-sub {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 6px;
+    font-weight: 500;
+  }
+  .tile-sub.up { color: var(--success); }
+  .tile-sub.down { color: var(--danger); }
+
+  /* ---------- GRID PANELS ---------- */
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+  .panel {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+    box-shadow: var(--tile-shadow);
+  }
+  .panel-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+  .panel-subtitle {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+  }
+
+  /* ---------- CHARTS ---------- */
+  .chart-container {
+    position: relative;
+    width: 100%;
+    height: 240px;
+  }
+  svg { display: block; width: 100%; height: 100%; }
+
+  /* Tooltip */
+  .chart-tooltip {
+    position: absolute;
+    background: var(--proman-blue);
+    color: white;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 500;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    white-space: nowrap;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  .chart-tooltip.visible { opacity: 1; }
+
+  /* ---------- FULFILMENT PANEL ---------- */
+  .fulfilment-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  .fulfilment-stat {
+    text-align: center;
+    padding: 14px;
+    background: var(--bg);
+    border-radius: 8px;
+  }
+  .fulfilment-stat-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .fulfilment-stat-value {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--proman-blue);
+    font-family: var(--font-display);
+  }
+  .fulfilment-bar {
+    height: 10px;
+    background: var(--bg);
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 8px;
+    position: relative;
+  }
+  .fulfilment-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--proman-blue), var(--proman-blue-light));
+    border-radius: 5px;
+    transition: width 0.4s ease;
+  }
+  .fulfilment-bar-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+  }
+
+  /* ---------- DEMOGRAPHIC BARS ---------- */
+  .demo-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+  .demo-label {
+    width: 100px;
+    font-weight: 500;
+    color: var(--text);
+    flex-shrink: 0;
+  }
+  .demo-bar {
+    flex: 1;
+    height: 18px;
+    background: var(--bg);
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+  }
+  .demo-bar-fill {
+    height: 100%;
+    background: var(--proman-blue);
+    border-radius: 4px;
+    transition: width 0.4s ease;
+  }
+  .demo-bar-fill.alt { background: var(--proman-orange); }
+  .demo-value {
+    width: 60px;
+    text-align: right;
+    font-weight: 600;
+    color: var(--text);
+    font-variant-numeric: tabular-nums;
+  }
+  .demo-pct {
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+
+  /* ---------- DETAIL TABLE ---------- */
+  .detail-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  .detail-table th {
+    text-align: left;
+    padding: 10px 12px;
+    background: var(--proman-blue);
+    color: white;
+    font-weight: 600;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    border-bottom: 2px solid var(--proman-blue-dark);
+  }
+  .detail-table th:nth-child(3), .detail-table th:nth-child(4) { text-align: right; }
+  .detail-table td {
+    padding: 9px 12px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  .detail-table td:nth-child(3), .detail-table td:nth-child(4) {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+    font-weight: 600;
+  }
+  .detail-table tr:hover td { background: var(--bg); }
+  .detail-table .group-row td {
+    background: #ebeef4;
+    font-weight: 700;
+    color: var(--proman-blue);
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    padding: 8px 12px;
+  }
+  .detail-table .banner-row td {
+    background: var(--proman-orange);
+    color: white;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 10px 12px;
+    text-align: center;
+  }
+  .detail-table .group-label {
+    font-weight: 600;
+    color: var(--proman-blue);
+  }
+
+  /* ---------- ISSUES LOG ---------- */
+  .issues-list {
+    list-style: none;
+    padding: 0;
+  }
+  .issue-item {
+    padding: 12px 14px;
+    border-left: 3px solid var(--proman-orange);
+    background: #fef9f3;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .issue-week {
+    font-weight: 700;
+    color: var(--proman-orange);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-right: 8px;
+  }
+  .issue-empty {
+    color: var(--text-light);
+    font-style: italic;
+    padding: 16px;
+    text-align: center;
+    font-size: 13px;
+  }
+
+  /* ---------- FOOTER ---------- */
+  .footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    color: var(--text-light);
+  }
+  .footer-brand { font-weight: 600; color: var(--text-muted); }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 1100px) {
+    .tiles { grid-template-columns: repeat(3, 1fr); }
+    .grid-2, .grid-3 { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 700px) {
+    .container { padding: 16px; }
+    .topbar { padding: 12px 16px; flex-wrap: wrap; gap: 12px; }
+    .tiles { grid-template-columns: repeat(2, 1fr); }
+    .tile-value { font-size: 22px; }
+    .period-bar { padding: 12px; }
+    .period-selector-group { width: 100%; }
+    .period-select { flex: 1; min-width: 0; }
+    .topbar-title { font-size: 14px; }
+    .ccf-logo { height: 38px; padding: 4px 10px; }
+    .ccf-logo img { height: 24px; }
+  }
+
+  /* ---------- PRINT ---------- */
+  @media print {
+    body { background: white; }
+    .topbar { box-shadow: none; }
+    .period-bar { display: none; }
+    .tile, .panel { break-inside: avoid; box-shadow: none; border: 1px solid #ccc; }
+    .container { max-width: 100%; padding: 12px; }
+  }
+
+  /* ---------- LEGEND ---------- */
+  .chart-legend {
+    display: flex;
+    gap: 16px;
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 8px;
+    justify-content: center;
+  }
+  .legend-item { display: flex; align-items: center; gap: 6px; }
+  .legend-swatch { width: 12px; height: 3px; border-radius: 2px; }
+</style>
+</head>
+<body>
+
+<!-- ===== TOPBAR ===== -->
+<div class="topbar">
+  <div class="topbar-left">
+    <img src="https://proman-uk.com/img/logo.png" alt="PROMAN" class="topbar-logo" id="proman-logo">
+    <div>
+      <div class="topbar-title">Labour Provider KPI Dashboard</div>
+      <div class="topbar-subtitle" id="topbar-subtitle">Cranswick Continental Foods · 2026</div>
+    </div>
+  </div>
+  <div class="topbar-right">
+    <div class="last-updated">
+      Last updated<strong id="last-updated-date">19 May 2026</strong>
+    </div>
+    <div class="ccf-logo">
+      <img src="https://promank13.azurewebsites.net/Proman/media/PDF/cranswick-continental-transparent.png"
+           alt="Cranswick Continental Foods"
+           id="ccf-logo"
+           onerror="this.style.display='none'; this.parentElement.innerHTML='<span style=\'font-weight:700;color:#003680;font-size:13px;\'>CRANSWICK<br>CONTINENTAL FOODS</span>';">
+    </div>
+  </div>
+</div>
+
+<!-- ===== MAIN ===== -->
+<div class="container">
+
+  <!-- Period selector -->
+  <div class="period-bar">
+    <div class="period-tabs" role="tablist">
+      <button class="period-tab active" data-view="weekly">Weekly</button>
+      <button class="period-tab" data-view="monthly">Monthly</button>
+      <button class="period-tab" data-view="ytd">Year to Date</button>
+    </div>
+    <div class="period-selector-group">
+      <span class="period-label" id="selector-label">Week:</span>
+      <select class="period-select" id="period-select"></select>
+    </div>
+  </div>
+
+  <!-- KPI tiles -->
+  <div class="section-title">Headline KPIs</div>
+  <div class="tiles" id="tiles"></div>
+
+  <!-- Fulfilment focus -->
+  <div class="section-title">Fulfilment</div>
+  <div class="grid-2">
+    <div class="panel">
+      <div class="panel-title">Shifts this period</div>
+      <div class="panel-subtitle">Scheduled vs requested vs delivered</div>
+      <div class="fulfilment-row">
+        <div class="fulfilment-stat">
+          <div class="fulfilment-stat-label">Scheduled</div>
+          <div class="fulfilment-stat-value" id="ff-scheduled">—</div>
+        </div>
+        <div class="fulfilment-stat">
+          <div class="fulfilment-stat-label">Requested</div>
+          <div class="fulfilment-stat-value" id="ff-requested">—</div>
+        </div>
+        <div class="fulfilment-stat">
+          <div class="fulfilment-stat-label">Delivered</div>
+          <div class="fulfilment-stat-value" id="ff-delivered">—</div>
+        </div>
+      </div>
+      <div>
+        <div class="fulfilment-bar-label"><span>Delivery vs requested</span><span id="ff-delivery-pct">—</span></div>
+        <div class="fulfilment-bar"><div class="fulfilment-bar-fill" id="ff-delivery-bar" style="width:0%"></div></div>
+        <div class="fulfilment-bar-label"><span>Scheduled vs requested</span><span id="ff-sched-pct">—</span></div>
+        <div class="fulfilment-bar"><div class="fulfilment-bar-fill" id="ff-sched-bar" style="width:0%"></div></div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-title">Fulfilment trend</div>
+      <div class="panel-subtitle">Delivered vs requested, last 12 weeks</div>
+      <div class="chart-container">
+        <svg id="fulfilment-chart" viewBox="0 0 600 240" preserveAspectRatio="none"></svg>
+      </div>
+      <div class="chart-legend">
+        <div class="legend-item"><div class="legend-swatch" style="background:var(--proman-blue)"></div>Delivered</div>
+        <div class="legend-item"><div class="legend-swatch" style="background:var(--proman-orange)"></div>Requested</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hours trend + Demographics -->
+  <div class="section-title">Hours &amp; Workforce</div>
+  <div class="grid-2">
+    <div class="panel">
+      <div class="panel-title">Hours worked trend</div>
+      <div class="panel-subtitle">Last 12 weeks</div>
+      <div class="chart-container">
+        <svg id="hours-chart" viewBox="0 0 600 240" preserveAspectRatio="none"></svg>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-title">Headcount trend</div>
+      <div class="panel-subtitle">Last 12 weeks</div>
+      <div class="chart-container">
+        <svg id="headcount-chart" viewBox="0 0 600 240" preserveAspectRatio="none"></svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- Demographics -->
+  <div class="section-title">Demographic Breakdown</div>
+  <div class="grid-3">
+    <div class="panel">
+      <div class="panel-title">Sex</div>
+      <div class="panel-subtitle" id="demo-sex-sub">—</div>
+      <div id="demo-sex"></div>
+    </div>
+    <div class="panel">
+      <div class="panel-title">Age Groups</div>
+      <div class="panel-subtitle" id="demo-age-sub">—</div>
+      <div id="demo-age"></div>
+    </div>
+    <div class="panel">
+      <div class="panel-title">Nationality</div>
+      <div class="panel-subtitle" id="demo-nat-sub">—</div>
+      <div id="demo-nat"></div>
+    </div>
+  </div>
+
+  <!-- Detail table -->
+  <div class="section-title">Full KPI Breakdown</div>
+  <div class="panel" style="padding: 0; overflow: hidden;">
+    <table class="detail-table" id="detail-table"></table>
+  </div>
+
+  <!-- Issues log -->
+  <div class="section-title">Issues, Feedback &amp; Other Notes</div>
+  <div class="grid-2">
+    <div class="panel">
+      <div class="panel-title">Issues raised</div>
+      <div class="panel-subtitle">Concerns and feedback reported during this period</div>
+      <ul class="issues-list" id="issues-list"></ul>
+    </div>
+    <div class="panel">
+      <div class="panel-title">Other nationalities</div>
+      <div class="panel-subtitle">Detail of workers categorised under "Other"</div>
+      <div id="other-nat" style="font-size: 13px; line-height: 1.7; color: var(--text);"></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-brand">PROMAN UK · Labour Provider KPI Reporting</div>
+    <div><span id="footer-source">Data source: CCF_KPI_Input.xlsx (SharePoint)</span></div>
+  </div>
+</div>
+
+<div class="chart-tooltip" id="chart-tooltip"></div>
+
+<script>
+// ============================================================
+//                       DATA
+// ============================================================
+// In production this is loaded from a JSON file produced by
+// Power Automate. For the prototype it's embedded here.
+
+const KPI_DEFS = [
+  { idx: 0,  group: "Number of Temporary Workers", sub: null, agg: "avg", isPct: false },
+  { idx: 1,  group: "Total Hours Worked", sub: null, agg: "sum", isPct: false },
+  { idx: 2,  group: "BANNER", sub: "Breakdown of Temporary Workers", agg: "header" },
+  { idx: 3,  group: "Sex", sub: "Male", agg: "avg", isPct: true },
+  { idx: 4,  group: "Sex", sub: "Female", agg: "avg", isPct: true },
+  { idx: 5,  group: "Location", sub: "Within 10 miles of site", agg: "avg", isPct: true },
+  { idx: 6,  group: "Age Groups", sub: "16 - 18", agg: "avg", isPct: true },
+  { idx: 7,  group: "Age Groups", sub: "19 - 30", agg: "avg", isPct: true },
+  { idx: 8,  group: "Age Groups", sub: "31 - 40", agg: "avg", isPct: true },
+  { idx: 9,  group: "Age Groups", sub: "41 - 50", agg: "avg", isPct: true },
+  { idx: 10, group: "Age Groups", sub: "51 - 60", agg: "avg", isPct: true },
+  { idx: 11, group: "Age Groups", sub: "61+", agg: "avg", isPct: true },
+  { idx: 12, group: "Nationality", sub: "British", agg: "avg", isPct: true },
+  { idx: 13, group: "Nationality", sub: "Polish", agg: "avg", isPct: true },
+  { idx: 14, group: "Nationality", sub: "India", agg: "avg", isPct: true },
+  { idx: 15, group: "Nationality", sub: "Romanian", agg: "avg", isPct: true },
+  { idx: 16, group: "Nationality", sub: "Nigerian", agg: "avg", isPct: true },
+  { idx: 17, group: "Nationality", sub: "Pakistan", agg: "avg", isPct: true },
+  { idx: 18, group: "Nationality", sub: "Hong Kong (China)", agg: "avg", isPct: true },
+  { idx: 19, group: "Nationality", sub: "Total Other", agg: "avg", isPct: true },
+  { idx: 20, group: "Nationality", sub: "Other (define)", agg: "text" },
+  { idx: 21, group: "Ethnicity", sub: "Detail", agg: "text" },
+  { idx: 22, group: "Disabilities", sub: "Registered disabilities (managers)", agg: "avg" },
+  { idx: 23, group: "Health & Safety", sub: "Accidents reported", agg: "sum" },
+  { idx: 24, group: "Health & Safety", sub: "Inductions conducted", agg: "sum" },
+  { idx: 25, group: "Fulfilment", sub: "Shifts scheduled by CCF Planning", agg: "sum" },
+  { idx: 26, group: "Fulfilment", sub: "Shifts requested by Production", agg: "sum" },
+  { idx: 27, group: "Fulfilment", sub: "Shifts delivered by agency", agg: "sum" },
+  { idx: 28, group: "Fulfilment", sub: "Workers retained by CCF", agg: "avg" },
+  { idx: 29, group: "Issues raised", sub: "Concerns / feedback", agg: "text" },
+];
+
+let DATA = null;
+
+
+function normaliseData(raw) {
+  // The dashboard expects DATA.weeks to be:
+  //   [{week: N, values: {kpi_index: value, ...}}, ...]
+  //
+  // Power Automate produces it flat:
+  //   [{week: N, kpi_index: M, value_num: X, value_text: Y}, ...]
+  //
+  // Detect the shape and convert if needed.
+  if (!raw || !Array.isArray(raw.weeks)) return raw;
+  const first = raw.weeks[0];
+  if (!first) return raw;
+
+  // If the first entry already has a `values` object, it is the nested form — leave it alone
+  if (first.values && typeof first.values === 'object') return raw;
+
+  // Otherwise, group the flat records by week
+  const grouped = {};
+  for (const r of raw.weeks) {
+    const w = parseInt(r.week, 10);
+    if (isNaN(w)) continue;
+    const kpi = parseInt(r.kpi_index, 10);
+    if (isNaN(kpi)) continue;
+
+    // Determine the value — prefer value_num if it parses as a number,
+    // otherwise fall back to value_text. Power Automate gives strings.
+    let value = null;
+    const vn = r.value_num;
+    const vt = r.value_text;
+    if (vn !== null && vn !== undefined && vn !== '') {
+      const n = parseFloat(vn);
+      if (!isNaN(n)) value = n;
+    }
+    if (value === null && vt !== null && vt !== undefined && vt !== '') {
+      value = String(vt);
+    }
+    if (value === null) continue;
+
+    if (!grouped[w]) grouped[w] = { week: w, values: {} };
+    grouped[w].values[kpi] = value;
+  }
+
+  raw.weeks = Object.values(grouped).sort((a, b) => a.week - b.week);
+  return raw;
+}
+
+async function loadData() {
+  try {
+    const response = await fetch('./data.json', { cache: 'no-store' });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    DATA = await response.json();
+    DATA = normaliseData(DATA);
+    return true;
+  } catch (err) {
+    document.body.innerHTML = `
+      <div style="max-width: 600px; margin: 80px auto; padding: 32px; background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); font-family: sans-serif;">
+        <h1 style="color: #003680; margin-bottom: 12px; font-size: 20px;">Dashboard unavailable</h1>
+        <p style="color: #5a6478; line-height: 1.6; margin-bottom: 16px;">The data file could not be loaded. This usually means the source spreadsheet hasn't been processed yet, or there's a temporary connection issue.</p>
+        <p style="color: #5a6478; line-height: 1.6; margin-bottom: 8px;"><strong>Technical detail:</strong> ${err.message}</p>
+        <p style="color: #8b94a8; font-size: 12px; margin-top: 20px;">If this persists, please contact PROMAN.</p>
+      </div>`;
+    return false;
+  }
+}
+
+// ============================================================
+//                   AGGREGATION
+// ============================================================
+
+function formatNumber(n, opts = {}) {
+  if (n === null || n === undefined || isNaN(n)) return '—';
+  const { decimals = 0, compact = false } = opts;
+  if (compact && n >= 10000) {
+    return (n / 1000).toFixed(1).replace(/\.0$/, '') + 'k';
+  }
+  return n.toLocaleString('en-GB', {
+    minimumFractionDigits: decimals,
+    maximumFractionDigits: decimals
+  });
+}
+
+function getWeekData(weekNum) {
+  return DATA.weeks.find(w => w.week === weekNum) || null;
+}
+
+function aggregateWeeks(weekNums, kpiIdx, agg) {
+  const values = [];
+  const textParts = [];
+  for (const w of weekNums) {
+    const wd = getWeekData(w);
+    if (!wd) continue;
+    const v = wd.values[kpiIdx];
+    if (v === null || v === undefined || v === '') continue;
+    if (agg === 'text') {
+      // Skip noisy "N/A" entries
+      if (typeof v === 'string' && v.trim().toUpperCase() !== 'N/A' && v.trim() !== '') {
+        textParts.push({ week: w, text: v });
+      }
+    } else if (typeof v === 'number') {
+      values.push(v);
+    }
+  }
+  if (agg === 'text') return textParts;
+  if (agg === 'sum') return values.reduce((a, b) => a + b, 0);
+  if (agg === 'avg') return values.length ? values.reduce((a, b) => a + b, 0) / values.length : 0;
+  return 0;
+}
+
+function getViewData(view, selector) {
+  // selector: weekly = week number; monthly = month number; ytd = up-to week number
+  let weekNums = [];
+  let label = '';
+  if (view === 'weekly') {
+    weekNums = [selector];
+    const wd = getWeekData(selector);
+    if (wd) {
+      const meta = DATA.weeksMeta.find(m => m.w === selector);
+      label = `Week ${String(selector).padStart(2,'0')} · ${meta.mon_short} – ${meta.sun_short}`;
+    }
+  } else if (view === 'monthly') {
+    weekNums = DATA.weeksMeta.filter(m => m.month === selector).map(m => m.w);
+    label = MONTH_NAMES[selector - 1];
+  } else if (view === 'ytd') {
+    weekNums = DATA.weeksMeta.filter(m => m.w <= selector).map(m => m.w);
+    const meta = DATA.weeksMeta.find(m => m.w === selector);
+    label = `YTD up to W${String(selector).padStart(2,'0')} (${meta.sun_short})`;
+  }
+  const result = { label, weekNums, values: {} };
+  for (const kpi of KPI_DEFS) {
+    if (kpi.agg === 'header') continue;
+    result.values[kpi.idx] = aggregateWeeks(weekNums, kpi.idx, kpi.agg);
+  }
+  return result;
+}
+
+const MONTH_NAMES = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+// ============================================================
+//                     STATE
+// ============================================================
+
+let currentView = 'weekly';
+let currentSelector = null;
+
+// Determine latest week with data
+function latestWeek() {
+  const populated = DATA.weeks.filter(w => w.values && Object.keys(w.values).length > 0).map(w => w.week);
+  return Math.max(...populated);
+}
+
+// ============================================================
+//                     RENDER
+// ============================================================
+
+function renderSelector() {
+  const sel = document.getElementById('period-select');
+  const lbl = document.getElementById('selector-label');
+  sel.innerHTML = '';
+  if (currentView === 'weekly') {
+    lbl.textContent = 'Week:';
+    DATA.weeksMeta.forEach(m => {
+      const o = document.createElement('option');
+      o.value = m.w;
+      o.textContent = `W${String(m.w).padStart(2,'0')} · ${m.mon_short} – ${m.sun_short}`;
+      sel.appendChild(o);
+    });
+    sel.value = currentSelector;
+  } else if (currentView === 'monthly') {
+    lbl.textContent = 'Month:';
+    // Only show months that have at least one populated week
+    const populatedMonths = [...new Set(DATA.weeks.filter(w => Object.keys(w.values).length>0)
+      .flatMap(w => {
+        const m = DATA.weeksMeta.find(x=>x.w===w.week);
+        return m ? [m.month] : [];
+      }))].sort((a,b)=>a-b);
+    populatedMonths.forEach(m => {
+      const o = document.createElement('option');
+      o.value = m;
+      o.textContent = MONTH_NAMES[m-1];
+      sel.appendChild(o);
+    });
+    if (!populatedMonths.includes(currentSelector)) currentSelector = populatedMonths[populatedMonths.length-1];
+    sel.value = currentSelector;
+  } else {
+    lbl.textContent = 'YTD up to:';
+    DATA.weeksMeta.forEach(m => {
+      const o = document.createElement('option');
+      o.value = m.w;
+      o.textContent = `W${String(m.w).padStart(2,'0')} · ${m.sun_short}`;
+      sel.appendChild(o);
+    });
+    sel.value = currentSelector;
+  }
+}
+
+function renderTiles(view) {
+  const tiles = document.getElementById('tiles');
+  const v = view.values;
+  const headcount = Math.round(v[0]);
+  const hours = v[1];
+  const accidents = v[23];
+  const inductions = v[24];
+  const requested = v[26];
+  const delivered = v[27];
+  const fulfilmentPct = requested > 0 ? (delivered / requested * 100) : 0;
+  const retained = Math.round(v[28]);
+
+  tiles.innerHTML = `
+    <div class="tile">
+      <div class="tile-label">Headcount</div>
+      <div class="tile-value">${formatNumber(headcount)}</div>
+      <div class="tile-sub">Temporary workers</div>
+    </div>
+    <div class="tile accent">
+      <div class="tile-label">Hours Worked</div>
+      <div class="tile-value">${formatNumber(hours, {decimals:0, compact:true})}<span class="unit">hrs</span></div>
+      <div class="tile-sub">${currentView === 'weekly' ? 'This week' : currentView === 'monthly' ? 'This month' : 'Year to date'}</div>
+    </div>
+    <div class="tile ${fulfilmentPct >= 98 ? 'success' : fulfilmentPct >= 95 ? '' : 'warn'}">
+      <div class="tile-label">Fulfilment</div>
+      <div class="tile-value">${formatNumber(fulfilmentPct, {decimals:1})}<span class="unit">%</span></div>
+      <div class="tile-sub">${formatNumber(delivered)} of ${formatNumber(requested)} shifts</div>
+    </div>
+    <div class="tile ${accidents > 0 ? 'warn' : 'success'}">
+      <div class="tile-label">Accidents</div>
+      <div class="tile-value">${formatNumber(accidents)}</div>
+      <div class="tile-sub">Reported this period</div>
+    </div>
+    <div class="tile">
+      <div class="tile-label">Inductions</div>
+      <div class="tile-value">${formatNumber(inductions)}</div>
+      <div class="tile-sub">Conducted this period</div>
+    </div>
+    <div class="tile accent">
+      <div class="tile-label">Retained</div>
+      <div class="tile-value">${formatNumber(retained)}</div>
+      <div class="tile-sub">Workers retained by CCF</div>
+    </div>
+  `;
+}
+
+function renderFulfilment(view) {
+  const v = view.values;
+  const scheduled = v[25] || 0;
+  const requested = v[26] || 0;
+  const delivered = v[27] || 0;
+  document.getElementById('ff-scheduled').textContent = formatNumber(scheduled);
+  document.getElementById('ff-requested').textContent = formatNumber(requested);
+  document.getElementById('ff-delivered').textContent = formatNumber(delivered);
+  const deliveryPct = requested > 0 ? (delivered/requested*100) : 0;
+  const schedPct = requested > 0 ? (scheduled/requested*100) : 0;
+  document.getElementById('ff-delivery-pct').textContent = formatNumber(deliveryPct, {decimals:1}) + '%';
+  document.getElementById('ff-sched-pct').textContent = formatNumber(schedPct, {decimals:1}) + '%';
+  document.getElementById('ff-delivery-bar').style.width = Math.min(100, deliveryPct) + '%';
+  document.getElementById('ff-sched-bar').style.width = Math.min(100, schedPct) + '%';
+}
+
+function renderDemographics(view) {
+  const v = view.values;
+  const total = v[0] || 1;
+
+  // Sex
+  const male = v[3] || 0, female = v[4] || 0;
+  const sexTotal = male + female || 1;
+  document.getElementById('demo-sex-sub').textContent = `${formatNumber(male+female)} workers`;
+  document.getElementById('demo-sex').innerHTML = `
+    <div class="demo-row">
+      <span class="demo-label">Male</span>
+      <div class="demo-bar"><div class="demo-bar-fill" style="width:${male/sexTotal*100}%"></div></div>
+      <span class="demo-value">${formatNumber(male)} <span class="demo-pct">${(male/sexTotal*100).toFixed(0)}%</span></span>
+    </div>
+    <div class="demo-row">
+      <span class="demo-label">Female</span>
+      <div class="demo-bar"><div class="demo-bar-fill alt" style="width:${female/sexTotal*100}%"></div></div>
+      <span class="demo-value">${formatNumber(female)} <span class="demo-pct">${(female/sexTotal*100).toFixed(0)}%</span></span>
+    </div>
+  `;
+
+  // Age groups
+  const ageLabels = ["16 - 18","19 - 30","31 - 40","41 - 50","51 - 60","61+"];
+  const ageVals = [6,7,8,9,10,11].map(i => v[i] || 0);
+  const ageTotal = ageVals.reduce((a,b)=>a+b,0) || 1;
+  document.getElementById('demo-age-sub').textContent = `${formatNumber(ageTotal)} workers`;
+  document.getElementById('demo-age').innerHTML = ageLabels.map((lbl, i) => `
+    <div class="demo-row">
+      <span class="demo-label">${lbl}</span>
+      <div class="demo-bar"><div class="demo-bar-fill" style="width:${ageVals[i]/ageTotal*100}%"></div></div>
+      <span class="demo-value">${formatNumber(ageVals[i])} <span class="demo-pct">${(ageVals[i]/ageTotal*100).toFixed(0)}%</span></span>
+    </div>
+  `).join('');
+
+  // Nationality
+  const natLabels = ["British","Polish","India","Romanian","Nigerian","Pakistan","Hong Kong","Total Other"];
+  const natVals = [12,13,14,15,16,17,18,19].map(i => v[i] || 0);
+  const natTotal = natVals.reduce((a,b)=>a+b,0) || 1;
+  document.getElementById('demo-nat-sub').textContent = `${formatNumber(natTotal)} workers across ${natLabels.length} categories`;
+  // Sort by size for readability
+  const natPairs = natLabels.map((l,i)=>({l, v:natVals[i]})).sort((a,b)=>b.v-a.v);
+  document.getElementById('demo-nat').innerHTML = natPairs.map(p => `
+    <div class="demo-row">
+      <span class="demo-label">${p.l}</span>
+      <div class="demo-bar"><div class="demo-bar-fill" style="width:${p.v/natTotal*100}%"></div></div>
+      <span class="demo-value">${formatNumber(p.v)} <span class="demo-pct">${(p.v/natTotal*100).toFixed(0)}%</span></span>
+    </div>
+  `).join('');
+}
+
+// ============================================================
+//                     CHARTS (SVG)
+// ============================================================
+
+function drawLineChart(svgId, dataPoints, opts = {}) {
+  const svg = document.getElementById(svgId);
+  if (!svg) return;
+  const { width: vbW = 600, height: vbH = 240 } = opts;
+  const padL = 40, padR = 16, padT = 16, padB = 32;
+  const W = vbW - padL - padR, H = vbH - padT - padB;
+
+  svg.innerHTML = '';
+  svg.setAttribute('viewBox', `0 0 ${vbW} ${vbH}`);
+
+  // Compute scales
+  const series = dataPoints.series; // [{name, color, values:[{x, y}]}]
+  const xs = series[0].values.map(v => v.x);
+  const allY = series.flatMap(s => s.values.map(v => v.y));
+  const yMin = opts.yMin !== undefined ? opts.yMin : Math.min(0, Math.min(...allY) * 0.9);
+  const yMax = opts.yMax !== undefined ? opts.yMax : Math.max(...allY) * 1.1;
+  const xMin = Math.min(...xs), xMax = Math.max(...xs);
+
+  const xScale = x => padL + (xMax === xMin ? W/2 : (x - xMin)/(xMax - xMin) * W);
+  const yScale = y => padT + H - (y - yMin)/(yMax - yMin || 1) * H;
+
+  // Y axis grid lines (4 lines)
+  const yTicks = 4;
+  for (let i = 0; i <= yTicks; i++) {
+    const yVal = yMin + (yMax - yMin) * i / yTicks;
+    const yPx = yScale(yVal);
+    const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+    line.setAttribute('x1', padL); line.setAttribute('x2', padL + W);
+    line.setAttribute('y1', yPx); line.setAttribute('y2', yPx);
+    line.setAttribute('stroke', '#e3e6ec'); line.setAttribute('stroke-width', '1');
+    if (i === 0) line.setAttribute('stroke', '#c8cdd8');
+    svg.appendChild(line);
+    const txt = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+    txt.setAttribute('x', padL - 6); txt.setAttribute('y', yPx + 4);
+    txt.setAttribute('text-anchor', 'end');
+    txt.setAttribute('font-size', '10'); txt.setAttribute('fill', '#5a6478');
+    txt.setAttribute('font-family', 'inherit');
+    txt.textContent = opts.formatY ? opts.formatY(yVal) : Math.round(yVal).toLocaleString('en-GB');
+    svg.appendChild(txt);
+  }
+
+  // X axis labels (show every nth)
+  const xStep = Math.max(1, Math.ceil(xs.length / 8));
+  xs.forEach((x, i) => {
+    if (i % xStep !== 0 && i !== xs.length - 1) return;
+    const xPx = xScale(x);
+    const txt = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+    txt.setAttribute('x', xPx); txt.setAttribute('y', padT + H + 16);
+    txt.setAttribute('text-anchor', 'middle');
+    txt.setAttribute('font-size', '10'); txt.setAttribute('fill', '#5a6478');
+    txt.setAttribute('font-family', 'inherit');
+    txt.textContent = opts.formatX ? opts.formatX(x) : 'W' + String(x).padStart(2,'0');
+    svg.appendChild(txt);
+  });
+
+  // Draw each series
+  series.forEach((s, sIdx) => {
+    // Path
+    const path = s.values.map((p, i) => `${i === 0 ? 'M' : 'L'} ${xScale(p.x)} ${yScale(p.y)}`).join(' ');
+    const pathEl = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    pathEl.setAttribute('d', path);
+    pathEl.setAttribute('fill', 'none');
+    pathEl.setAttribute('stroke', s.color);
+    pathEl.setAttribute('stroke-width', '2.5');
+    pathEl.setAttribute('stroke-linejoin', 'round');
+    pathEl.setAttribute('stroke-linecap', 'round');
+    svg.appendChild(pathEl);
+
+    // Area under (only for first series)
+    if (sIdx === 0 && opts.fillArea !== false && series.length === 1) {
+      const areaPath = path + ` L ${xScale(s.values[s.values.length-1].x)} ${padT + H} L ${xScale(s.values[0].x)} ${padT + H} Z`;
+      const areaEl = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      areaEl.setAttribute('d', areaPath);
+      areaEl.setAttribute('fill', s.color);
+      areaEl.setAttribute('opacity', '0.1');
+      svg.insertBefore(areaEl, pathEl);
+    }
+
+    // Dots + hover
+    s.values.forEach(p => {
+      const c = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+      c.setAttribute('cx', xScale(p.x));
+      c.setAttribute('cy', yScale(p.y));
+      c.setAttribute('r', '3.5');
+      c.setAttribute('fill', s.color);
+      c.setAttribute('stroke', 'white');
+      c.setAttribute('stroke-width', '1.5');
+      c.style.cursor = 'pointer';
+      c.addEventListener('mouseenter', (e) => {
+        const tt = document.getElementById('chart-tooltip');
+        tt.innerHTML = `<strong>W${String(p.x).padStart(2,'0')}</strong> · ${s.name}: ${opts.formatY ? opts.formatY(p.y) : Math.round(p.y).toLocaleString('en-GB')}`;
+        const r = c.getBoundingClientRect();
+        tt.style.left = (r.left + r.width/2) + 'px';
+        tt.style.top = (r.top - 32 + window.scrollY) + 'px';
+        tt.style.transform = 'translateX(-50%)';
+        tt.classList.add('visible');
+      });
+      c.addEventListener('mouseleave', () => {
+        document.getElementById('chart-tooltip').classList.remove('visible');
+      });
+      svg.appendChild(c);
+    });
+  });
+}
+
+function renderCharts() {
+  // Determine last 12 weeks from current view's perspective
+  // (or all populated weeks, capped at 12)
+  const populated = DATA.weeks.filter(w => Object.keys(w.values).length > 0)
+    .map(w => w.week).sort((a,b)=>a-b);
+  const last12 = populated.slice(-12);
+  const series_d = { name: 'Delivered', color: '#003680',
+    values: last12.map(w => ({ x: w, y: getWeekData(w)?.values[27] || 0 })) };
+  const series_r = { name: 'Requested', color: '#F58220',
+    values: last12.map(w => ({ x: w, y: getWeekData(w)?.values[26] || 0 })) };
+  drawLineChart('fulfilment-chart', { series: [series_d, series_r] }, {
+    formatY: v => Math.round(v).toLocaleString('en-GB'),
+  });
+
+  const series_h = { name: 'Hours', color: '#003680',
+    values: last12.map(w => ({ x: w, y: getWeekData(w)?.values[1] || 0 })) };
+  drawLineChart('hours-chart', { series: [series_h] }, {
+    formatY: v => (v/1000).toFixed(1) + 'k',
+  });
+
+  const series_hc = { name: 'Headcount', color: '#F58220',
+    values: last12.map(w => ({ x: w, y: getWeekData(w)?.values[0] || 0 })) };
+  drawLineChart('headcount-chart', { series: [series_hc] }, {
+    formatY: v => Math.round(v).toString(),
+    yMin: 0,
+  });
+}
+
+function renderDetailTable(view) {
+  const tbl = document.getElementById('detail-table');
+  const v = view.values;
+  const headcount = v[0] || 0;
+
+  let html = `<thead><tr>
+    <th style="width:22%">Group</th>
+    <th style="width:48%">Sub-heading</th>
+    <th style="width:18%">Value</th>
+    <th style="width:12%">%</th>
+  </tr></thead><tbody>`;
+
+  let prevGroup = null;
+  KPI_DEFS.forEach(kpi => {
+    if (kpi.agg === 'header') {
+      html += `<tr class="banner-row"><td colspan="4">${kpi.sub}</td></tr>`;
+      prevGroup = null;
+      return;
+    }
+    const val = v[kpi.idx];
+    let valStr = '—';
+    if (kpi.agg === 'text') {
+      if (Array.isArray(val) && val.length > 0) {
+        valStr = `${val.length} ${val.length === 1 ? 'entry' : 'entries'}`;
+      } else {
+        valStr = '—';
+      }
+    } else if (typeof val === 'number') {
+      if (kpi.sub && kpi.group === 'Total Hours Worked' || kpi.idx === 1) {
+        valStr = formatNumber(val, { decimals: 2 });
+      } else {
+        valStr = formatNumber(Math.round(val));
+      }
+    }
+    let pctStr = '';
+    if (kpi.isPct && headcount > 0 && typeof val === 'number') {
+      pctStr = formatNumber(val/headcount*100, { decimals: 1 }) + '%';
+    }
+    const groupCell = kpi.group !== prevGroup ? `<span class="group-label">${kpi.group}</span>` : '';
+    prevGroup = kpi.group;
+    html += `<tr>
+      <td>${groupCell}</td>
+      <td>${kpi.sub || ''}</td>
+      <td>${valStr}</td>
+      <td>${pctStr}</td>
+    </tr>`;
+  });
+  html += '</tbody>';
+  tbl.innerHTML = html;
+}
+
+function renderIssues(view) {
+  const issues = view.values[29];
+  const list = document.getElementById('issues-list');
+  if (!Array.isArray(issues) || issues.length === 0) {
+    list.innerHTML = '<div class="issue-empty">No issues raised during this period.</div>';
+    return;
+  }
+  list.innerHTML = issues.map(i =>
+    `<li class="issue-item"><span class="issue-week">W${String(i.week).padStart(2,'0')}</span>${i.text}</li>`
+  ).join('');
+}
+
+function renderOtherNat(view) {
+  const other = view.values[20];
+  const el = document.getElementById('other-nat');
+  if (!Array.isArray(other) || other.length === 0) {
+    el.innerHTML = '<div style="color:var(--text-light); font-style:italic;">No "other" nationality entries for this period.</div>';
+    return;
+  }
+  // For weekly view, just show the one entry's text. For monthly/YTD, show unique entries grouped.
+  if (currentView === 'weekly' && other.length === 1) {
+    el.textContent = other[0].text;
+  } else {
+    el.innerHTML = other.map(o =>
+      `<div style="margin-bottom:8px;"><strong style="color:var(--proman-orange); font-size:11px;">W${String(o.week).padStart(2,'0')}:</strong> ${o.text}</div>`
+    ).join('');
+  }
+}
+
+// ============================================================
+//                     CONTROL
+// ============================================================
+
+function render() {
+  const view = getViewData(currentView, currentSelector);
+  renderTiles(view);
+  renderFulfilment(view);
+  renderDemographics(view);
+  renderDetailTable(view);
+  renderIssues(view);
+  renderOtherNat(view);
+  renderCharts();
+}
+
+function setView(view) {
+  currentView = view;
+  document.querySelectorAll('.period-tab').forEach(t => {
+    t.classList.toggle('active', t.dataset.view === view);
+  });
+  // Set sensible default selector for the new view
+  if (view === 'weekly') {
+    currentSelector = latestWeek();
+  } else if (view === 'monthly') {
+    const meta = DATA.weeksMeta.find(m => m.w === latestWeek());
+    currentSelector = meta ? meta.month : 4;
+  } else {
+    currentSelector = latestWeek();
+  }
+  renderSelector();
+  render();
+}
+
+document.addEventListener('DOMContentLoaded', async () => {
+  if (!await loadData()) return;
+  // Prefer the lastUpdated timestamp from data.json, falling back to latest week's Sunday
+  let displayDate = null;
+  if (DATA.lastUpdated) {
+    displayDate = new Date(DATA.lastUpdated);
+  } else {
+    const latest = latestWeek();
+    const meta = DATA.weeksMeta.find(m => m.w === latest);
+    if (meta) displayDate = new Date(meta.sun);
+  }
+  if (displayDate && !isNaN(displayDate)) {
+    document.getElementById('last-updated-date').textContent =
+      displayDate.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' });
+  }
+
+  // Handle logo load failure
+  const promanLogo = document.getElementById('proman-logo');
+  if (promanLogo) {
+    promanLogo.onerror = function() {
+      this.outerHTML = '<div style="color:white; font-weight:700; font-size:20px; font-family:var(--font-display); letter-spacing:0.1em;">PROMAN</div>';
+    };
+  }
+
+  // Update topbar from data.json
+  if (DATA.client && DATA.client.name) {
+    const sub = document.getElementById('topbar-subtitle');
+    if (sub) sub.textContent = DATA.client.name + ' · ' + (DATA.reportingYear || '');
+  }
+  if (DATA.provider && DATA.provider.logoUrl) {
+    const logo = document.getElementById('proman-logo');
+    if (logo) logo.src = DATA.provider.logoUrl;
+  }
+  if (DATA.client && DATA.client.logoUrl) {
+    const ccfLogo = document.getElementById('ccf-logo');
+    if (ccfLogo) ccfLogo.src = DATA.client.logoUrl;
+  }
+
+  // Tab handlers
+  document.querySelectorAll('.period-tab').forEach(t => {
+    t.addEventListener('click', () => setView(t.dataset.view));
+  });
+
+  // Select handler
+  document.getElementById('period-select').addEventListener('change', (e) => {
+    currentSelector = parseInt(e.target.value, 10);
+    render();
+  });
+
+  // Initial state
+  currentView = 'weekly';
+  currentSelector = latestWeek();
+  renderSelector();
+  render();
+});
+</script>
+</body>
+</html>
